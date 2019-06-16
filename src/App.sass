@@ -1,0 +1,37 @@
+*
+  margin: 0
+  padding: 0
+  &::after, &::before, &
+    box-sizing: border-box
+
+\:root
+  --body-bg-color: #eee
+  --body-text-color: #000
+  --nav-bg-color: #FFF
+  --nav-drawer-shadow: 0 0 10px #585757
+  --nav-link-color: #737373
+  --nav-link-color--active: #000
+  --shadow-sm: 0 3px 10px rgba(0, 0, 0, 0.15)
+  --transparent-bg: rgba(0, 0, 0, 0.3)
+  &.dark-theme
+    --body-bg-color: #3c393e
+    --body-text-color: #e2e2e2
+    --nav-bg-color: #312c33
+    --nav-drawer-shadow: 0 0 10px #060606
+    --nav-link-color: #a2a2a2
+    --nav-link-color-active: #FFF
+    --shadow-sm: 0 3px 10px rgba(0, 0, 0, 0.5)
+    --transparent-bg: rgba(0, 0, 0, 0.5)
+
+html
+  scroll-behavior: smooth
+
+body
+  font-weight: 300
+  font-family: 'Montserrat', sans-serif
+  background-color: var(--body-bg-color)
+  color: var(--body-text-color)
+  transition: 250ms color, 250ms background-color
+
+#about, #projects, #contact
+  height: 500px
