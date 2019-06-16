@@ -4,9 +4,10 @@
   top: 0
   left: 0
   right: 0
-  height: 50px
-  box-shadow: var(--shadow-sm)
+  height: var(--nav-height)
+  box-shadow: var(--nav-shadow)
   transition: 250ms background-color
+  z-index: 100
 
 .nav
   height: 100%
@@ -37,14 +38,11 @@
       transition: transform 200ms ease-in
       background-color: var(--transparent-bg)
       height: 100vh
-      z-index: 100
       &--open
         transform: translateX(0)
-    &-item
-      height: 100%
   &__link
     font-weight: 600
-    padding: 0.5rem 1rem
+    padding: 0.8rem 1rem
     display: block
     text-decoration: none
     cursor: pointer
@@ -71,20 +69,5 @@
         height: 100%
         transform: translateX(0)
     &__link
-      line-height: 50px
+      line-height: var(--nav-height)
       padding: 0 1rem
-
-@media (min-width: 786px)
-  .header
-    height: 60px
-  .nav
-    &__link
-      line-height: 60px
-
-
-@media (min-width: 1200px)
-  .header
-    height: 70px
-  .nav
-    &__link
-      line-height: 70px
