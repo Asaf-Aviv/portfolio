@@ -1,6 +1,6 @@
 import React from 'react';
+import Section from '../Section';
 import ContentCard from '../ContentCard';
-import Container from '../Container';
 import Emoji from '../Emoji';
 
 import './About.sass';
@@ -11,25 +11,25 @@ const paragraphs: string[] = [
   'Outside of vscode you can find me in stackoverflow browsing questions and trying to help others through code.',
 ];
 
-const renderParagraph = (text: string) => <p className="about__info">{text}</p>;
+const renderParagraph = (text: string, i: number) => (
+  <p key={i} className="about__info">{text}</p>
+);
 
 const About: React.FC = () => (
-  <section id="about" className="about__section">
-    <Container>
-      <ContentCard>
-        <div className="about">
-          <h1 className="about__title">
-            Hi
-            {' '}
-            <Emoji emoji="👋" label="waving hand" />
-            {' '}
-            I&apos;m Asaf Aviv.
-          </h1>
-          {paragraphs.map(renderParagraph)}
-        </div>
-      </ContentCard>
-    </Container>
-  </section>
+  <Section id="about" classes="about__section">
+    <ContentCard>
+      <header className="about">
+        <h1 className="about__title">
+          Hi
+          {' '}
+          <Emoji emoji="👋" label="waving hand" />
+          {' '}
+          I&apos;m Asaf Aviv.
+        </h1>
+        {paragraphs.map(renderParagraph)}
+      </header>
+    </ContentCard>
+  </Section>
 );
 
 export default About;
