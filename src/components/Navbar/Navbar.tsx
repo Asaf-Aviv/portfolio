@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Container from '../Container';
 import ThemeToggler from '../ThemeToggler';
-import { ReactComponent as MenuIcon } from '../../assets/menu.svg';
+import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 
 import './Navbar.sass';
 
@@ -37,6 +37,7 @@ const Navbar: React.FC = () => {
           >
             <ul className="nav__list" onClick={e => e.stopPropagation()}>
               {renderListItem('About', toggleIsOpen)}
+              {renderListItem('Skills', toggleIsOpen)}
               {renderListItem('Projects', toggleIsOpen)}
               {renderListItem('Contact', toggleIsOpen)}
             </ul>
