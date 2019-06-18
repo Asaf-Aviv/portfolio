@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import useDarkMode from '../../useDarkMode';
+import useDarkMode from '../../hooks/useDarkMode';
 
 import './ThemeToggler.sass';
 
