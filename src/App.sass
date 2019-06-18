@@ -5,7 +5,7 @@
     box-sizing: border-box
 
 \:root
-  --bg-alt: #FFF
+  --bg-alt: #ffffff8a
   --body-bg-color: #eee
   --body-text-color: #737373
   --border-radius-lg: 6px
@@ -28,7 +28,7 @@
   @media (min-width: 1200px)
     --nav-height: 70px
   &.dark-theme
-    --bg-alt: #221f23
+    --bg-alt: #221f2385
     --bg-alt2: #3e3e3e
     --body-bg-color: #3c393e
     --body-text-color: #e2e2e2
@@ -45,10 +45,11 @@
 
 html
   scroll-behavior: smooth
+  min-height: 100vh
 
 body
-  // font-weight: 300
   font-family: 'Montserrat', sans-serif
   background-color: var(--body-bg-color)
   color: var(--body-text-color)
   transition: 250ms color, 250ms background-color
+  height: 100%
