@@ -21,4 +21,9 @@ const Section: React.FC<SectionProps> = ({
   </section>
 );
 
+Section.defaultProps = {
+  classes: '',
+  title: '',
+};
+
 export default Section;

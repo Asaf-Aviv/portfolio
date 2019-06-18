@@ -13,4 +13,8 @@ const ContentCard: React.FC<ContentCardProps> = ({ classes, children }) => (
   </div>
 );
 
+ContentCard.defaultProps = {
+  classes: '',
+};
+
 export default ContentCard;

@@ -21,13 +21,18 @@ const Input: React.FC<InputProps> = ({
     <input
       name={name}
       className="input"
-      type={type || 'text'}
+      type={type}
       placeholder={placeholder}
       autoComplete={autocomplete}
       required
     />
   </div>
 );
+
+Input.defaultProps = {
+  type: 'text',
+  autocomplete: 'false',
+};
 
 const Contact: React.FC = () => {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
