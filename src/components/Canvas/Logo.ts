@@ -25,7 +25,7 @@ export default class Logo {
     this.x = this.enterFromLeft ? -40 : ctx.canvas.width + 40;
     this.y = randomNum(10, 50) / 100 * ctx.canvas.height;
     this.dx = this.enterFromLeft ? randomNum(1.5, 4) : -randomNum(1.5, 4);
-    this.dy = randomNum(0.5, 2);
+    this.dy = randomNum(1, 3);
     this.radius = randomInt(50, 100);
     this.gravity = randomNum(0.005, 0.01);
     this.alreadySeen = false;
