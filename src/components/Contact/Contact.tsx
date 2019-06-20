@@ -43,21 +43,34 @@ const Contact: React.FC = () => {
   return (
     <Section id="contact">
       <ContentCard>
-        <form
-          action="https://formspree.io/asafaviv89@gmail.com"
-          method="POST"
-          className="contact__form"
-          onSubmit={onSubmit}
-        >
-          <h2 className="contact__form-title">Contact Me</h2>
-          <Input type="text" name="name" placeholder="Name" />
-          <Input type="email" name="email" placeholder="Email" autocomplete="true" />
-          <textarea className="textarea" name="message" placeholder="Message" required rows={6} />
-          <button type="submit" className="contact__form-submit">
-          Send
-            <EmailIcon />
-          </button>
-        </form>
+        <div className="contact__container">
+          <div className="contact__form-container">
+            <form
+              action="https://formspree.io/asafaviv89@gmail.com"
+              method="POST"
+              className="contact__form"
+              onSubmit={onSubmit}
+            >
+              <h3 className="contact__form-title">Send me a message</h3>
+              <Input type="text" name="name" placeholder="Name" />
+              <Input type="email" name="email" placeholder="Email" autocomplete="true" />
+              <textarea className="textarea" name="message" placeholder="Message" required rows={6} />
+              <button type="submit" className="contact__form-submit">
+                Send
+                <EmailIcon />
+              </button>
+            </form>
+          </div>
+          <div className="contact__details">
+            <h3 className="contact__details-title">Contact Information</h3>
+            <div className="contact__details-item">
+              <span>(972) 544 502 505</span>
+            </div>
+            <div className="contact__details-item">
+              <span>asafaviv89@gmail.com</span>
+            </div>
+          </div>
+        </div>
       </ContentCard>
     </Section>
   );
