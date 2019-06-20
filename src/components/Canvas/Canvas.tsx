@@ -41,39 +41,43 @@ const Canvas: React.FC = () => {
 
     const init = () => {
       if (!isContextReady) return;
+
       const animate = () => {
         animationId = requestAnimationFrame(animate);
         ctx.current!.clearRect(0, 0, ctx.current!.canvas.width, ctx.current!.canvas.height);
-        flyingLogosRef.current = flyingLogosRef.current.reduce((inViewLogos: Logo[], logo) => {
-          if (
-            !logo.alreadySeen
-            || !logo.isOutOfView()
-            || !logo.miniLogos.every(m => m.isOutOfView())
-          ) {
-            inViewLogos.push(logo);
-            logo.miniLogos.forEach(({ isOutOfView, update }) => {
-              if (!isOutOfView()) update();
-            });
-            logo.update();
-          }
-          return inViewLogos;
-        }, []);
+        flyingLogosRef.current = flyingLogosRef.current
+          .reduce((inViewLogos: Logo[], logo) => {
+            if (
+              !logo.alreadySeen
+              || !logo.isOutOfView()
+              || !logo.miniLogos.every(m => m.isOutOfView())
+            ) {
+              inViewLogos.push(logo);
+              logo.miniLogos.forEach(({ isOutOfView, update }) => {
+                if (!isOutOfView()) update();
+              });
+              logo.update();
+            }
+            return inViewLogos;
+          }, []);
       };
 
       if (isDocumentVisible) {
         intervalIdRef.current = window.setInterval(() => {
-          const shouldCreate = Math.random() > 0.25;
+          const shouldCreate = Math.random() > 0.35;
           if (shouldCreate) {
             const numOfLogos = Math.floor(Math.random() * (5 - 1)) + 1;
             flyingLogosRef.current.push(...[...Array(numOfLogos)].map(generateLogo));
           }
         }, 3000);
-      }
 
-      animate();
+        animate();
+      } else {
+        window.clearInterval(intervalIdRef.current);
+      }
     };
 
-    setTimeout(init, 5000);
+    setTimeout(init, 0);
 
     return () => {
       cancelAnimationFrame(animationId);
