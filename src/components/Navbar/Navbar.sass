@@ -1,19 +1,18 @@
-.header
-  background-color: var(--nav-bg-color)
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  height: var(--nav-height)
-  box-shadow: var(--nav-shadow)
-  transition: 250ms background-color
-  z-index: 100
-
 .nav
   height: 100%
   display: flex
   align-items: center
   justify-content: space-between
+  &__header
+    background-color: var(--nav-bg-color)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: var(--nav-height)
+    box-shadow: var(--nav-shadow)
+    transition: 250ms background-color
+    z-index: 100
   &__menu-btn
     display: flex
     cursor: pointer
@@ -43,6 +42,7 @@
         transform: translateX(0)
   &__link
     font-weight: 600
+    font-size: 18px
     padding: 0.8rem 1rem
     display: block
     text-decoration: none
@@ -53,6 +53,14 @@
     transition: 250ms color
     &:hover, &:active, &--active
       color: var(--nav-link-color-active)
+    &:target
+      color: red !important
+  .togglers__container
+    display: flex
+    align-items: center
+    font-weight: 600
+    color: var(--nav-link-color-active)
+
 
 @media (min-width: 600px)
   .nav

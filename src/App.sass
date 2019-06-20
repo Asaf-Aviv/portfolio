@@ -25,12 +25,13 @@
   --nav-bg-color: #FFF
   --nav-drawer-shadow: 0 0 10px #585757
   --nav-link-color: #a7a7a7
-  --nav-link-color-active: #000
+  --nav-link-color-active: #1e7688
   --nav-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
   --shadow-sm: 0 2px 9px 2px rgb(191, 191, 191)
   --shadow-md: 0 5px 10px 1px rgba(0, 0, 0, 0.15)
-  --text-color-alt: #044c45
-  --title-color: #004a42
+  --text-color-alt: #19616f
+  --title-color: #2897ad
+
   --transparent-bg: rgba(0, 0, 0, 0.3)
   &.dark-theme
     --bg-alt: #221f2385
@@ -42,12 +43,13 @@
     --nav-bg-color: #312c33
     --nav-drawer-shadow: 0 0 10px #060606
     --nav-link-color: #a2a2a2
-    --nav-link-color-active: #FFF
+    --nav-link-color-active: #29ccf1
     --nav-shadow: 0 3px 10px rgba(0, 0, 0, 0.5)
     --shadow-sm: 0 2px 9px 2px rgba(0, 0, 0, 0.5)
     --shadow-md: 0 5px 10px 1px rgb(18, 16, 19)
-    --text-color-alt: #03cebb
-    --title-color: #00ffe7
+    --text-color-alt: #cef6ff
+    --title-color: #45d4f5
+
     --transparent-bg: rgba(0, 0, 0, 0.5)
 html
   scroll-behavior: smooth
@@ -59,6 +61,7 @@ body
   color: var(--body-text-color)
   transition: 250ms color, 250ms background-color
   height: 100%
+  letter-spacing: 0.5px
 
 ul
   list-style: none
@@ -67,3 +70,31 @@ ul
   .github-logo
     g
       fill: #FFF
+
+.input, .textarea
+  outline: none
+  width: 100%
+  color: var(--body-text-color)
+  background: var(--bg-alt2)
+  border-radius: var(--border-radius-lg)
+  border: 2px solid transparent
+  box-shadow: var(--input-shadow)
+  &:focus
+    border: 2px solid #3da5ff
+
+.textarea
+  padding: 1rem
+  resize: none
+  
+.input
+  padding: 0.2rem 0.5rem
+  height: 50px
+  padding-left: 40px
+  &__container
+    position: relative
+    margin-bottom: 25px
+  &__icon
+    position: absolute
+    top: 13px
+    left: 10px
+    width: 20px

@@ -7,10 +7,10 @@
     background: var(--bg-alt)
     box-shadow: var(--shadow-md)
     margin: 0 auto
-    &-title
+    &-name
       color: var(--title-color)
       padding-top: var(--space-md)
-    &-title, &-subtitle
+    &-name, &-description
       text-align: center
       margin: 0 0 var(--space-md) 0
     &-footer
@@ -32,10 +32,10 @@
       color: var(--text-color-alt)
       transition: 150ms color, 150ms background
       &:hover
-        background: #009082
+        background: #1a7b90
         color: #FFF
       &:active
-        background-color: #047368
+        background-color: #155f6f
     &-github-link
       flex: 1
       display: inline-block
@@ -47,7 +47,11 @@
   &__list
     display: grid
     width: 100%
+    grid-gap: var(--space-lg)
+    @media (min-width: 786px)
+      grid-template-columns: repeat(2, 1fr)
     &-item
+      width: 100%
 
 .tech-stack
   padding: 1rem
@@ -66,7 +70,7 @@
     &-item
       padding: 0.5rem 1.5rem
 
-@media (min-width: 600px)
+@media (min-width: 600px) and (max-width: 785px)
   .tech-stack
     &__category
       flex: 1
@@ -77,11 +81,13 @@
       text-align: left
       justify-content: space-evenly
 
-@media (min-width: 786px)
+@media (min-width: 1250px)
   .tech-stack
     &__category
-      padding: 2rem
-@media (min-width: 900px)
-  .tech-stack
-    &__category
-      padding: 3rem
+      flex: 1
+      padding: 1rem
+      margin-bottom: 0
+    &__category-container
+      display: flex
+      text-align: left
+      justify-content: space-evenly

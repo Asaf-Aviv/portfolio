@@ -1,0 +1,71 @@
+.toggler
+  background: #464646
+  border-radius: 0.75rem / 50%
+  content: ""
+  cursor: pointer
+  display: inline-block
+  height: 1.5rem
+  order: 0
+  position: relative
+  transition: background-color 500ms ease
+  vertical-align: bottom
+  width: 3rem
+  margin-left: 0.5rem
+  &::before
+    content: ""
+    display: block
+    height: .3rem
+    left: 0.92rem
+    position: absolute
+    top: .7rem
+    transform: translate3d(-50%,-50%,0) rotate(-45deg)
+    width: .7rem
+    border-bottom: 2px solid #fff
+    border-left: 2px solid #fff
+  &::after
+    bottom: .15rem
+    content: ""
+    display: block
+    left: .2rem
+    position: absolute
+    top: .15rem
+    transition: left 250ms ease
+    width: 1.15rem
+    background: #fff
+    border-radius: 50%
+  &__input
+    opacity: 0
+    position: absolute
+    &:checked + .toggler
+      background: #1f8399
+      &::after
+        left: 1.68rem
+      .sun
+        opacity: 0
+      .moon
+        opacity: 1
+    &:not(:checked) + .toggler
+      .sun
+        opacity: 1
+    &-icon
+      opacity: 0
+      height: 22px
+      width: 22px
+      top: 1px
+      position: absolute
+      transition: opacity 100ms
+      &.sun
+        right: 2px
+      &.moon
+        top: 4px
+        height: 16px
+        width: 16px
+        left: 6px
+
+.toggler.theme-toggler
+  margin-left: 2rem
+  &::before
+    content: none
+
+.toggler__input:checked + .theme-toggler
+
