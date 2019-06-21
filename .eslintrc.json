@@ -3,7 +3,10 @@
     "browser": true,
     "es6": true
   },
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -43,6 +46,6 @@
     "no-console": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off" 
   }
 }
