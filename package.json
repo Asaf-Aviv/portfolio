@@ -2,6 +2,7 @@
   "name": "portfolio.v2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/Asaf-Aviv/portfolio",
   "dependencies": {
     "@types/jest": "24.0.14",
     "@types/lodash.capitalize": "^4.2.6",
@@ -9,6 +10,7 @@
     "@types/node": "12.0.8",
     "@types/react": "16.8.20",
     "@types/react-dom": "16.8.4",
+    "gh-pages": "^2.0.1",
     "lodash.capitalize": "^4.2.1",
     "lodash.throttle": "^4.1.1",
     "node-sass": "^4.12.0",
@@ -23,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
