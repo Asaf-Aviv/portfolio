@@ -43,7 +43,6 @@ export default class Logo {
 
     update = () => {
       if (!this.alreadySeen && !this.isOutOfView()) {
-        console.log('inside view');
         this.alreadySeen = true;
       }
 
