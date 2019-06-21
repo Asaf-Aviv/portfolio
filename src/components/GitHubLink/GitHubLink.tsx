@@ -14,7 +14,6 @@ const GitHubLink: React.FC<GitHubLinkProps> = ({ href, classes = '' }) => (
     rel="noopener noreferrer"
   >
     <GithubLogo className="github-logo" />
-    <span>hello test1111</span>
   </a>
 );
 
