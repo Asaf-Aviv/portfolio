@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '../Container';
 import Toggler from '../Toggler';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
@@ -42,6 +42,14 @@ const Navbar: React.FC<NavProps> = ({
   const isOpenStateHandler = (nextState: boolean) => () => {
     setIsOpen(nextState);
   };
+
+  useEffect(() => {
+    const body = document.querySelector('body')!;
+    // eslint-disable-next-line no-unused-expressions
+    isOpen
+      ? body.classList.add('no-scroll')
+      : body.classList.remove('no-scroll');
+  }, [isOpen]);
 
   return (
     <header className="nav__header">
