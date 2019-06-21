@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Asaf-Aviv/portfolio",
+  "homepage": "https://Asaf-Aviv.github.io/portfolio/",
   "dependencies": {
     "@types/jest": "24.0.14",
     "@types/lodash.capitalize": "^4.2.6",
