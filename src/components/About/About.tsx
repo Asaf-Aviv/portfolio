@@ -2,6 +2,7 @@ import React from 'react';
 import Section from '../Section';
 import ContentCard from '../ContentCard';
 import Emoji from '../Emoji';
+import MyLinks from '../MyLinks';
 
 import './About.sass';
 
@@ -27,6 +28,7 @@ const About: React.FC = () => (
           I&apos;m Asaf Aviv.
         </h1>
         {paragraphs.map(renderParagraph)}
+        <MyLinks />
       </header>
     </ContentCard>
   </Section>
