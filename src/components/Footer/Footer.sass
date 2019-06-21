@@ -1,4 +1,17 @@
 .footer
-  height: 150px 
+  height: 100px 
   background: var(--bg-alt)
-  margin-top: calc(var(--nav-height) + var(--space-lg));
+  margin-top: calc(var(--nav-height) + var(--space-lg))
+  box-shadow: var(--shadow-sm)
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+
+.my-links
+  display: flex
+  &__link
+    margin-right: 20px
+    height: 40px
+    svg
+      height: 100%
