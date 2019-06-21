@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 import { hot } from 'react-hot-loader/root';
 import Navbar from './components/Navbar';
 import About from './components/About';
@@ -13,6 +13,8 @@ import useActiveScrollLinks from './hooks/useActiveScrollLinks';
 
 import 'normalize.css';
 import './App.sass';
+
+export const DarkModeContext = createContext<boolean>(false);
 
 const App: React.FC = () => {
   const [showAnimations, setShowAnimations] = useState(true);
@@ -34,7 +36,9 @@ const App: React.FC = () => {
       />
       <About />
       <Skills />
-      <Projects />
+      <DarkModeContext.Provider value={isDarkMode}>
+        <Projects />
+      </DarkModeContext.Provider>
       <Contact />
       <Footer />
     </main>
