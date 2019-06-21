@@ -2,7 +2,7 @@ import React, {
   useRef, createContext, useEffect, useState,
 } from 'react';
 import ReactLogo from '../../assets/logos/react.svg';
-import NodejsLogo from '../../assets/logos/nodejs.svg';
+import NodejsLogo from '../../assets/logos/nodejs-circle.svg';
 import CSS3Logo from '../../assets/logos/css3.svg';
 import HTML5Logo from '../../assets/logos/graphql.svg';
 import JavaScriptLogo from '../../assets/logos/javascript.svg';
