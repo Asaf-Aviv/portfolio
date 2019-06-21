@@ -1,6 +1,6 @@
 import React from 'react';
 import Divider from '../Divider';
-import { ReactComponent as GithubLogo } from '../../assets/logos/github.svg';
+import GitHubLink from '../GitHubLink';
 
 import './ProjectCard.sass';
 
@@ -71,14 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           Open Project
         </a>
-        <a
-          className="project__card-github-link"
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubLogo className="github-logo" />
-        </a>
+        <GitHubLink href={github} classes="project__card-github-link" />
       </div>
     </div>
   </div>
