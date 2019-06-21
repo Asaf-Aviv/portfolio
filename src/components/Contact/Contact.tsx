@@ -67,7 +67,9 @@ const Contact: React.FC = () => {
               <span>(972) 544 502 505</span>
             </div>
             <div className="contact__details-item">
-              <span>asafaviv89@gmail.com</span>
+              <a className="email__link" href="mailto:asafaviv89@gmail.com">
+                asafaviv89@gmail.com
+              </a>
             </div>
           </div>
         </div>
