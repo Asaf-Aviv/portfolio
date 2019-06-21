@@ -5,6 +5,7 @@ import ContentCard from '../ContentCard';
 import { ReactComponent as HTML5Logo } from '../../assets/logos/html5.svg';
 import { ReactComponent as CSS3Logo } from '../../assets/logos/css3.svg';
 import { ReactComponent as JavaScriptLogo } from '../../assets/logos/javascript.svg';
+import { ReactComponent as ReduxLogo } from '../../assets/logos/redux.svg';
 import { ReactComponent as TypeScriptLogo } from '../../assets/logos/typescript.svg';
 import { ReactComponent as ReactLogo } from '../../assets/logos/react.svg';
 import { ReactComponent as SASSLogo } from '../../assets/logos/sass.svg';
@@ -20,6 +21,7 @@ const logos = [
   JavaScriptLogo,
   TypeScriptLogo,
   ReactLogo,
+  ReduxLogo,
   SASSLogo,
   NodeJSLogo,
   MongoDBLogo,
