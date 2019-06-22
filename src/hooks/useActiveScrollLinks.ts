@@ -8,6 +8,7 @@ const useActiveScrollLinks = () => {
 
     const checkActiveLink = throttle(() => {
       links.forEach((link) => {
+        console.log(link);
         const fromTop = window.scrollY;
         const sectionName = link.href.split('#')[1];
         const section = document.getElementById(sectionName)!;
