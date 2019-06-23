@@ -31,6 +31,25 @@ const Canvas: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    const checkClick = (e: MouseEvent) => {
+      flyingLogosRef.current.forEach((logo) => {
+        const { clientX: cX, clientY: cY } = e;
+        if (((cX - logo.x) ** 2) + ((cY - logo.y) ** 2) < (logo.radius ** 2)) {
+          logo.shatter();
+        }
+        logo.miniLogos.forEach((miniLogos) => {
+          if (((cX - miniLogos.x) ** 2) + ((cY - miniLogos.y) ** 2) < (miniLogos.radius ** 2)) {
+            miniLogos.shatter();
+          }
+        });
+      });
+    };
+
+    window.addEventListener('click', checkClick);
+    return () => window.removeEventListener('click', checkClick);
+  }, []);
+
+  useEffect(() => {
     ctx.current = canvasRef.current!.getContext('2d')!;
     flyingLogosRef.current.push(...[...Array(5)].map(generateLogo));
     setIsContextReady(true);
@@ -50,11 +69,13 @@ const Canvas: React.FC = () => {
             if (
               !logo.alreadySeen
               || !logo.isOutOfView()
-              || !logo.miniLogos.every(m => m.isOutOfView())
+              || !logo.miniLogos.every(miniL => miniL.isOutOfView()
+                  && miniL.miniLogos.every(miniChild => miniChild.isOutOfView()))
             ) {
               inViewLogos.push(logo);
-              logo.miniLogos.forEach(({ isOutOfView, update }) => {
+              logo.miniLogos.forEach(({ isOutOfView, update, miniLogos }) => {
                 if (!isOutOfView()) update();
+                miniLogos.forEach(({ update: updateChild }) => updateChild());
               });
               logo.update();
             }
