@@ -11,12 +11,14 @@ export default class MiniLogo extends Logo {
   dx: number;
   dy: number;
   gravity: number;
+  miniLogos: MiniLogo[];
 
   constructor(
     ctx: CanvasRenderingContext2D,
     logo: HTMLImageElement,
     radius: number,
     x: number,
+    y: number,
     gravity: number,
   ) {
     super(ctx, logo);
@@ -24,20 +26,28 @@ export default class MiniLogo extends Logo {
     this.logo = logo;
     this.radius = radius / randomNum(1.3, 2);
     this.x = x;
-    this.y = this.ctx.canvas.height - this.radius;
+    this.y = y;
     this.dx = Math.random() > 0.5 ? randomNum(2, 3.5) : -randomNum(2, 3.5);
-    this.dy = -randomNum(1, 4);
+    this.dy = Math.random() > 0.5 ? randomNum(1, 4) : -randomNum(1, 4);
     this.gravity = gravity;
+    this.miniLogos = [];
   }
 
-  draw = () => {
-    this.ctx.drawImage(this.logo, this.x, this.y, this.radius, this.radius);
+  shatter = () => {
+    this.radius = this.radius / 1.5;
+
+    this.miniLogos.push(...[...Array(3)].map(() => new MiniLogo(
+      this.ctx, this.logo, this.radius, this.x, this.y, this.gravity,
+    )));
   }
 
   update = () => {
+    if (!this.alreadySeen && !this.isOutOfView()) {
+      this.alreadySeen = true;
+    }
+
     if (this.y + this.radius + this.dy > this.ctx.canvas.height) {
-      // eslint-disable-next-line no-use-before-define
-      this.dy = -this.dy * 0.8;
+      this.dy = -this.dy * 0.9;
     } else {
       this.dy += this.gravity;
     }

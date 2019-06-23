@@ -38,32 +38,35 @@ export default class Logo {
 
   isOutOfView = () => (
     this.x + this.radius > this.ctx.canvas.width + this.radius * 2
-    || this.x - this.radius < 0 - this.radius * 2
+      || this.x - this.radius < 0 - this.radius * 2
   )
 
-    update = () => {
-      if (!this.alreadySeen && !this.isOutOfView()) {
-        this.alreadySeen = true;
-      }
+  shatter = () => {
+    this.radius = this.radius / 1.5;
 
-      if (this.y + this.radius + this.dy > this.ctx.canvas.height) {
-        this.radius = this.radius / 1.5;
+    this.miniLogos.push(...[...Array(3)].map(() => new MiniLogo(
+      this.ctx, this.logo, this.radius, this.x, this.y, this.gravity,
+    )));
+  }
 
-        if (!this.isOutOfView()) {
-          // eslint-disable-next-line no-use-before-define
-          this.miniLogos.push(...[...Array(3)].map(() => new MiniLogo(
-            this.ctx, this.logo, this.radius, this.x, this.gravity,
-          )));
-        }
-
-        this.dy = -this.dy * 0.9;
-      } else {
-        this.dy += this.gravity;
-      }
-
-      this.x += this.dx;
-      this.y += this.dy;
-
-      this.draw();
+  update = () => {
+    if (!this.alreadySeen && !this.isOutOfView()) {
+      this.alreadySeen = true;
     }
+
+    if (this.y + this.radius + this.dy > this.ctx.canvas.height) {
+      if (!this.isOutOfView()) {
+        this.shatter();
+      }
+
+      this.dy = -this.dy * 0.9;
+    } else {
+      this.dy += this.gravity;
+    }
+
+    this.x += this.dx;
+    this.y += this.dy;
+
+    this.draw();
+  }
 }
