@@ -70,7 +70,7 @@ const projects: ProjectCardProps[] = [
     name: 'Chat',
     description: 'Chat app',
     screenshot: ChatScreenshot,
-    frontend: ['React', 'Redux', 'SASS'],
+    frontend: ['React', 'Redux', 'SASS', 'WebSockets'],
     backend: ['Node.js'],
     href: 'https://react-chat-app-2467.herokuapp.com/',
     github: 'https://github.com/Asaf-Aviv/chat-v2',
