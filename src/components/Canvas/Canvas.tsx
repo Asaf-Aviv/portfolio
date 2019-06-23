@@ -34,7 +34,6 @@ const Canvas: React.FC = () => {
   useEffect(() => {
     const eventType = 'ontouchstart' in window ? 'touchstart' : 'click';
 
-    // mark e as any because e.touches does not exist on type TouchEvent
     const checkClick = (e: any) => {
       const { clientX: cX, clientY: cY } = eventType === 'click' ? e : e.touches[0];
 
