@@ -26,14 +26,19 @@ const Canvas: React.FC = () => {
       canvasRef.current!.height = window.innerHeight;
     };
     resizeCanvas();
+
     window.addEventListener('resize', resizeCanvas);
     return () => window.removeEventListener('resize', resizeCanvas);
   }, []);
 
   useEffect(() => {
-    const checkClick = (e: MouseEvent) => {
+    const eventType = 'ontouchstart' in window ? 'touchstart' : 'click';
+
+    // mark e as any because e.touches does not exist on type TouchEvent
+    const checkClick = (e: any) => {
+      const { clientX: cX, clientY: cY } = eventType === 'click' ? e : e.touches[0];
+
       flyingLogosRef.current.forEach((logo) => {
-        const { clientX: cX, clientY: cY } = e;
         if (((cX - logo.x) ** 2) + ((cY - logo.y) ** 2) < (logo.radius ** 2)) {
           logo.shatter();
         }
@@ -45,8 +50,8 @@ const Canvas: React.FC = () => {
       });
     };
 
-    window.addEventListener('click', checkClick);
-    return () => window.removeEventListener('click', checkClick);
+    window.addEventListener(eventType, checkClick);
+    return () => window.removeEventListener(eventType, checkClick);
   }, []);
 
   useEffect(() => {
