@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b88f57d6.chunk.css",
-    "main.js": "/portfolio/static/js/main.c2bbe153.chunk.js",
+    "main.css": "/portfolio/static/css/main.a2a74fb6.chunk.css",
+    "main.js": "/portfolio/static/js/main.110a6b8a.chunk.js",
     "runtime~main.js": "/portfolio/static/js/runtime~main.f308c8e6.js",
     "static/css/2.24bf1742.chunk.css": "/portfolio/static/css/2.24bf1742.chunk.css",
-    "static/js/2.9d092bac.chunk.js": "/portfolio/static/js/2.9d092bac.chunk.js",
+    "static/js/2.b40aba2b.chunk.js": "/portfolio/static/js/2.b40aba2b.chunk.js",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.45019f46e5cbdb4532a79ef58d6e0462.js": "/portfolio/precache-manifest.45019f46e5cbdb4532a79ef58d6e0462.js",
+    "precache-manifest.3c8d1e673fa038265f0c1ce900d01286.js": "/portfolio/precache-manifest.3c8d1e673fa038265f0c1ce900d01286.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/media/blogggly-dark.png": "/portfolio/static/media/blogggly-dark.c2bc3c30.png",
     "static/media/blogggly.png": "/portfolio/static/media/blogggly.0f258cac.png",
