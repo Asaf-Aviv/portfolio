@@ -21,7 +21,6 @@ const renderLinks = (links: string[], onClick: () => void) => (
         href={`#${to.toLowerCase()}`}
         onClick={(e) => {
           // stop url from changing and scroll manually to the target
-          // because the url is changing automatically through useActivateLinks
           e.preventDefault();
           document.getElementById(to.toLowerCase())!.scrollIntoView();
           onClick();
