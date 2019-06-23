@@ -9,7 +9,6 @@ import Canvas from './components/Canvas';
 import Footer from './components/Footer';
 import LogosProvider from './components/Canvas/LogoLoaderProvider';
 import useDarkMode from './hooks/useDarkMode';
-import useActiveScrollLinks from './hooks/useActiveScrollLinks';
 
 import 'normalize.css';
 import './App.sass';
@@ -19,7 +18,6 @@ export const DarkModeContext = createContext<boolean>(false);
 const App: React.FC = () => {
   const [showAnimations, setShowAnimations] = useState(true);
   const [isDarkMode, toggleDarkMode] = useDarkMode();
-  useActiveScrollLinks();
 
   return (
     <main className="App">
