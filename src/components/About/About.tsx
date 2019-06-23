@@ -3,6 +3,7 @@ import Section from '../Section';
 import ContentCard from '../ContentCard';
 import Emoji from '../Emoji';
 import MyLinks from '../MyLinks';
+import Me from '../../assets/me.png';
 
 import './About.sass';
 
@@ -20,13 +21,16 @@ const About: React.FC = () => (
   <Section id="about" classes="about__section">
     <ContentCard>
       <header className="about">
-        <h1 className="about__title">
-          Hi
-          {' '}
-          <Emoji emoji="👋" label="waving hand" />
-          {' '}
-          I&apos;m Asaf Aviv.
-        </h1>
+        <div className="about__title-container">
+          <img className="me" src={Me} alt="Asaf Aviv" />
+          <h1 className="about__title">
+            Hi
+            {' '}
+            <Emoji emoji="👋" label="waving hand" />
+            {' '}
+            I&apos;m Asaf Aviv.
+          </h1>
+        </div>
         {paragraphs.map(renderParagraph)}
         <MyLinks />
         <h5 className="ps">PS:Don&apos;t try to click on the logos</h5>
