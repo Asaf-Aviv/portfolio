@@ -16,7 +16,7 @@ export interface ProjectCardProps {
   backend?: string[];
   db?: string[];
   href: string;
-  github: string;
+  github?: string;
 }
 
 const projects: ProjectCardProps[] = [
@@ -26,8 +26,8 @@ const projects: ProjectCardProps[] = [
     screenshot: PortfolioScreenshot,
     darkScreenshot: PortfolioDarkScreenshot,
     frontend: ['React', 'SASS'],
-    href: 'https://blogggly.com/',
-    github: 'https://github.com/Asaf-Aviv/blogggly',
+    href: '',
+    github: 'https://asaf-aviv.github.io/portfolio',
   },
   {
     name: 'Blogggly',
@@ -37,8 +37,7 @@ const projects: ProjectCardProps[] = [
     frontend: ['React', 'SASS', 'WebSockets'],
     backend: ['Node.js', 'GraphQL'],
     db: ['MongoDB'],
-    href: 'https://asaf-aviv.github.io/portfolio',
-    github: 'https://github.com/Asaf-Aviv/portfolio',
+    href: 'https://blogggly.com/',
   },
   {
     name: 'Memorize',

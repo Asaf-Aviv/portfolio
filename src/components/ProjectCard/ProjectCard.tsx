@@ -61,7 +61,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           Open Project
         </a>
-        <GitHubLink href={github} classes="project__card-github-link" />
+        {github
+          ? <GitHubLink href={github} classes="project__card-github-link" />
+          : <div className="fill" />
+        }
       </div>
     </div>
   );
