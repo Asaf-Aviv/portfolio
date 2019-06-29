@@ -73,8 +73,9 @@ const Canvas: React.FC = () => {
             if (
               !logo.alreadySeen
               || !logo.isOutOfView()
-              || !logo.miniLogos.every(miniL => miniL.isOutOfView()
-                  && miniL.miniLogos.every(miniChild => miniChild.isOutOfView()))
+              || (!logo.miniLogos.every(miniL => miniL.isOutOfView()
+                    && miniL.miniLogos.every(miniChild => miniChild.isOutOfView()))
+              )
             ) {
               inViewLogos.push(logo);
               logo.miniLogos.forEach(({ isOutOfView, update, miniLogos }) => {
@@ -102,7 +103,7 @@ const Canvas: React.FC = () => {
       }
     };
 
-    setTimeout(init, 0);
+    setTimeout(init, 5000);
 
     return () => {
       cancelAnimationFrame(animationId);
