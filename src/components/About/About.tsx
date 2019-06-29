@@ -33,7 +33,7 @@ const About: React.FC = () => (
         </div>
         {paragraphs.map(renderParagraph)}
         <MyLinks />
-        <h5 className="ps">PS:Don&apos;t try to click on the logos</h5>
+        <h5 className="ps">PS: Don&apos;t try to click on the logos</h5>
       </header>
     </ContentCard>
   </Section>

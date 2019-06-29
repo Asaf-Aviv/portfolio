@@ -7,7 +7,7 @@ import './Footer.sass';
 const Footer: React.FC = () => (
   <footer className="footer">
     <Container>
-      <h4>Thanks for stopping by, make sure you check out my GitHub and StackOverflow profiles.</h4>
+      <p className="footer__text">Thanks for stopping by, make sure you check out my GitHub and StackOverflow profiles.</p>
       <MyLinks />
     </Container>
   </footer>
