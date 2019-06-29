@@ -4,6 +4,7 @@ import Toggler from '../Toggler';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 import { ReactComponent as SunIcon } from '../../assets/icons/sun.svg';
 import { ReactComponent as MoonIcon } from '../../assets/icons/moon.svg';
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 import './Navbar.sass';
 
@@ -37,6 +38,7 @@ const Navbar: React.FC<NavProps> = ({
   isDarkMode, toggleDarkMode, showAnimations, toggleAnimations,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const windowWidth = useWindowWidth();
 
   const isOpenStateHandler = (nextState: boolean) => () => {
     setIsOpen(nextState);
@@ -45,10 +47,16 @@ const Navbar: React.FC<NavProps> = ({
   useEffect(() => {
     const body = document.querySelector('body')!;
     // eslint-disable-next-line no-unused-expressions
-    isOpen
-      ? body.classList.add('no-scroll')
-      : body.classList.remove('no-scroll');
-  }, [isOpen]);
+    if (isOpen) {
+      body.classList.add('no-scroll');
+    }
+
+    if (isOpen && windowWidth >= 786) {
+      setIsOpen(false);
+    }
+
+    return () => body.classList.remove('no-scroll');
+  }, [isOpen, windowWidth]);
 
   return (
     <header className="nav__header">
