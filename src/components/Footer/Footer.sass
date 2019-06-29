@@ -1,17 +1,18 @@
 .footer
-  height: 100px 
+  padding: 20px 0
   background: var(--bg-alt)
   margin-top: calc(var(--nav-height) + var(--space-lg))
   box-shadow: var(--shadow-sm)
   .container
     display: flex
     align-items: center
-    justify-content: space-evenly
-
-.my-links
-  display: flex
-  &__link
-    margin-right: 20px
-    height: 40px
-    svg
-      height: 100%
+    flex-wrap: wrap
+    @media (min-width: 900px)
+      flex-wrap: nowrap
+  &__text
+    width: 100%
+    margin-bottom: 20px
+    @media (min-width: 900px)
+      width: auto
+      margin-bottom: 0
+      margin-right: 20px
