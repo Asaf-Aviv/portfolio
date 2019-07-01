@@ -98,12 +98,10 @@ const Canvas: React.FC = () => {
         }, 3000);
 
         animate();
-      } else {
-        window.clearInterval(intervalIdRef.current);
       }
     };
 
-    setTimeout(init, 5000);
+    init();
 
     return () => {
       cancelAnimationFrame(animationId);
