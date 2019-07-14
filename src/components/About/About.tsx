@@ -9,7 +9,7 @@ import './About.sass';
 
 const paragraphs: string[] = [
   "I'm a Full stack web developer based in Haifa, Israel looking for a company to grow as a person as well as a developer.",
-  "I'm highly motivated with a can do attitude, love learning and messing around with new technologies on a daily basis.",
+  "I'm highly motivated with a can do attitude, love learning and breaking stuff on a daily basis.",
   'Outside of vscode you can find me in StackOverflow browsing questions and trying to help others through code.',
 ];
 
