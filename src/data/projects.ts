@@ -4,6 +4,7 @@ import MemorizeScreenshot from '../assets/projects screenshots/memorize.png';
 import ShopplyScreenshot from '../assets/projects screenshots/shopply.png';
 import MiniTwitchScreenshot from '../assets/projects screenshots/mini-twitch.png';
 import ChatScreenshot from '../assets/projects screenshots/chat.png';
+import CocktailsAndChillScreenshot from '../assets/projects screenshots/cocktailsandchill.png';
 import PortfolioScreenshot from '../assets/projects screenshots/portfolio.png';
 import PortfolioDarkScreenshot from '../assets/projects screenshots/portfolio-dark.png';
 
@@ -28,6 +29,13 @@ const projects: ProjectCardProps[] = [
     frontend: ['React', 'SASS'],
     href: '',
     github: 'https://asaf-aviv.github.io/portfolio',
+  },
+  {
+    name: 'Cocktails And Chill',
+    description: 'Explorer cocktails recipes',
+    screenshot: CocktailsAndChillScreenshot,
+    frontend: ['React', 'Redux', 'ant design'],
+    href: 'https://cocktailsandchill.com',
   },
   {
     name: 'Blogggly',
