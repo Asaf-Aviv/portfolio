@@ -36,6 +36,7 @@ const projects: ProjectCardProps[] = [
     screenshot: CocktailsAndChillScreenshot,
     frontend: ['React', 'Redux', 'ant design'],
     href: 'https://cocktailsandchill.com',
+    github: 'https://github.com/Asaf-Aviv/cocktails-n-chill/',
   },
   {
     name: 'Blogggly',
