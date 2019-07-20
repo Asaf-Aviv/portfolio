@@ -47,6 +47,7 @@ const projects: ProjectCardProps[] = [
     backend: ['Node.js', 'GraphQL'],
     db: ['MongoDB'],
     href: 'https://blogggly.com/',
+    github: 'https://github.com/Asaf-Aviv/blogggly',
   },
   {
     name: 'Memorize',
