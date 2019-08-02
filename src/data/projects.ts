@@ -4,6 +4,7 @@ import MemorizeScreenshot from '../assets/projects screenshots/memorize.png';
 import ShopplyScreenshot from '../assets/projects screenshots/shopply.png';
 import MiniTwitchScreenshot from '../assets/projects screenshots/mini-twitch.png';
 import ChatScreenshot from '../assets/projects screenshots/chat.png';
+import MonopolyFriendsScreenshot from '../assets/projects screenshots/monopolyfriends.png';
 import CocktailsAndChillScreenshot from '../assets/projects screenshots/cocktailsandchill.png';
 import PortfolioScreenshot from '../assets/projects screenshots/portfolio.png';
 import PortfolioDarkScreenshot from '../assets/projects screenshots/portfolio-dark.png';
@@ -22,13 +23,13 @@ export interface ProjectCardProps {
 
 const projects: ProjectCardProps[] = [
   {
-    name: 'Portfolio',
-    description: 'My Portfolio',
-    screenshot: PortfolioScreenshot,
-    darkScreenshot: PortfolioDarkScreenshot,
-    frontend: ['React', 'SASS'],
-    href: '',
-    github: 'https://asaf-aviv.github.io/portfolio',
+    name: 'Monopoly Friends (WIP)',
+    description: 'Multiplayer Monopoly Game',
+    screenshot: MonopolyFriendsScreenshot,
+    frontend: ['React', 'Redux', 'Material-UI', 'WebSockets'],
+    backend: ['Node.js', 'GraphQL', 'WebSockets'],
+    db: ['MongoDB'],
+    href: 'https://monopolyfriends.com',
   },
   {
     name: 'Cocktails And Chill',
@@ -44,7 +45,7 @@ const projects: ProjectCardProps[] = [
     screenshot: BlogglyScreenshot,
     darkScreenshot: BlogglyDarkScreenshot,
     frontend: ['React', 'SASS', 'WebSockets'],
-    backend: ['Node.js', 'GraphQL'],
+    backend: ['Node.js', 'GraphQL', 'WebSockets'],
     db: ['MongoDB'],
     href: 'https://blogggly.com/',
     github: 'https://github.com/Asaf-Aviv/blogggly',
@@ -56,6 +57,15 @@ const projects: ProjectCardProps[] = [
     frontend: ['React', 'SASS'],
     href: 'https://react-memorize.herokuapp.com/',
     github: 'https://github.com/Asaf-Aviv/memorize',
+  },
+  {
+    name: 'Portfolio',
+    description: 'My Portfolio',
+    screenshot: PortfolioScreenshot,
+    darkScreenshot: PortfolioDarkScreenshot,
+    frontend: ['React', 'SASS'],
+    href: '',
+    github: 'https://asaf-aviv.github.io/portfolio',
   },
   {
     name: 'Shopply',
@@ -80,7 +90,7 @@ const projects: ProjectCardProps[] = [
     description: 'Chat app',
     screenshot: ChatScreenshot,
     frontend: ['React', 'Redux', 'SASS', 'WebSockets'],
-    backend: ['Node.js'],
+    backend: ['Node.js', 'WebSockets'],
     href: 'https://react-chat-app-2467.herokuapp.com/',
     github: 'https://github.com/Asaf-Aviv/chat-v2',
   },
