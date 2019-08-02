@@ -11,7 +11,7 @@ const paragraphs: string[] = [
   "I'm a Full stack web developer based in Haifa, Israel looking for a company to grow as a person as well as a developer.",
   "I'm highly motivated with a can do attitude, love learning and breaking stuff on a daily basis.",
   'I love working with React, Redux, TypeScript, Node and GraphQL but happy to learn other technologies as well.',
-  'Outside of vscode you can find me in StackOverflow browsing questions and trying to help others through code.',
+  'Outside of vscode you can find me on StackOverflow browsing questions and trying to help others through code.',
 ];
 
 const renderParagraph = (text: string, i: number) => (
