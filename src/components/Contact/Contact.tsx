@@ -1,10 +1,9 @@
 import React from 'react';
 import Section from '../Section';
-
+import ContentCard from '../ContentCard';
 import { ReactComponent as EmailIcon } from '../../assets/icons/email.svg';
 
 import './Contact.sass';
-import ContentCard from '../ContentCard';
 
 interface InputProps {
   placeholder: string;
@@ -17,7 +16,6 @@ const Input: React.FC<InputProps> = ({
   type, name, placeholder, autocomplete,
 }) => (
   <div className="input__container">
-    <EmailIcon className="input__icon" />
     <input
       name={name}
       className="input"
@@ -49,7 +47,7 @@ const Contact: React.FC = () => (
             <Input type="email" name="email" placeholder="Email" autocomplete="true" />
             <textarea className="textarea" name="message" placeholder="Message" required rows={6} />
             <button type="submit" className="contact__form-submit">
-                Send
+              Send
               <EmailIcon />
             </button>
           </form>
@@ -61,7 +59,7 @@ const Contact: React.FC = () => (
           </div>
           <div className="contact__details-item">
             <a className="email__link" href="mailto:asafaviv89@gmail.com">
-                asafaviv89@gmail.com
+              asafaviv89@gmail.com
             </a>
           </div>
         </div>
