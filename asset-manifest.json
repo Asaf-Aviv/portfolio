@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7327babd.chunk.css",
-    "main.js": "/portfolio/static/js/main.233cb69a.chunk.js",
+    "main.css": "/portfolio/static/css/main.01ebad34.chunk.css",
+    "main.js": "/portfolio/static/js/main.76a0214d.chunk.js",
     "runtime~main.js": "/portfolio/static/js/runtime~main.f308c8e6.js",
     "static/css/2.24bf1742.chunk.css": "/portfolio/static/css/2.24bf1742.chunk.css",
     "static/js/2.15fb9c47.chunk.js": "/portfolio/static/js/2.15fb9c47.chunk.js",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.e6350cf27900d6e520061f6d3fc44fcd.js": "/portfolio/precache-manifest.e6350cf27900d6e520061f6d3fc44fcd.js",
+    "precache-manifest.c169bb6285c8fd07ff36077580b36b41.js": "/portfolio/precache-manifest.c169bb6285c8fd07ff36077580b36b41.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/media/blogggly-dark.png": "/portfolio/static/media/blogggly-dark.c2bc3c30.png",
     "static/media/blogggly.png": "/portfolio/static/media/blogggly.0f258cac.png",
