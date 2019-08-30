@@ -64,8 +64,8 @@ const projects: ProjectCardProps[] = [
     screenshot: PortfolioScreenshot,
     darkScreenshot: PortfolioDarkScreenshot,
     frontend: ['React', 'SASS'],
-    href: '',
-    github: 'https://asaf-aviv.github.io/portfolio',
+    href: 'https://asaf-aviv.github.io/portfolio',
+    github: 'https://github.com/Asaf-Aviv/portfolio',
   },
   {
     name: 'Shopply',
