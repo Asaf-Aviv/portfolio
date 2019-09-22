@@ -33,7 +33,7 @@ const projects: ProjectCardProps[] = [
   },
   {
     name: 'Cocktails And Chill',
-    description: 'Explorer cocktails recipes',
+    description: 'Explore cocktails recipes',
     screenshot: CocktailsAndChillScreenshot,
     frontend: ['React', 'Redux', 'ant design'],
     href: 'https://cocktailsandchill.com',
