@@ -32,8 +32,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <div className="project__card">
-      <h1 className="project__card-name">{name}</h1>
-      <h3 className="project__card-description">{description}</h3>
+      <h3 className="project__card-name">{name}</h3>
+      <h4 className="project__card-description">{description}</h4>
       <div className="project__img-container">
         <img
           className="project__img"

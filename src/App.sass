@@ -10,28 +10,34 @@
   --space-md: calc(var(--space-sm) * 2)
   --space-lg: calc(var(--space-md) * 2)
   --nav-height: 50px
-  @media (min-width: 786px)
-    --nav-height: 60px
   @media (min-width: 1200px)
-    --nav-height: 70px
+    --nav-height: 60px
 
 \:root
   --bg-alt: #ffffff8a
   --bg-alt2: #FFF
-  --body-bg-color: #eee
-  --body-text-color: #737373
+  --body-bg-color: #FFF
+  --body-text-color: #757575
+  --bg-alt1: #f8f6ff
+  --bg-alt2: #4b0e98
+  --bg-alt3: #8b30fe
+  --text-colored: #5a67f6
+  --text-colored-dark: #704ff9
   --border-color: #dedede
   --img-shadow: 0 2px 12px 3px #d8d8d8
   --input-shadow:  0 2px 5px 3px #d4d4d4
   --nav-bg-color: #FFF
   --nav-drawer-shadow: 0 0 10px #585757
-  --nav-link-color: #1e7688
+  --nav-link-color: #ebfbff
   --nav-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
   --shadow-sm: 0 2px 9px 2px rgb(191, 191, 191)
   --shadow-md: 0 5px 10px 1px rgba(0, 0, 0, 0.15)
+  --shadow-lg: 0px 5px 30px #a5a5a5
   --text-color-alt: #19616f
-  --title-color: #2897ad
+  --title-color: #FFF
   --transparent-bg: rgba(0, 0, 0, 0.3)
+  --gradient: linear-gradient(315deg, #08AEEA 0%, #902aff 100%)
+  --nav-gradient: linear-gradient(315deg, #457ef2 0%, #902aff 100%)
   &.dark-theme
     --bg-alt: #221f2385
     --bg-alt2: #3e3e3e
@@ -42,7 +48,7 @@
     --input-shadow:  0 2px 5px 3px #191515
     --nav-bg-color: #312c33
     --nav-drawer-shadow: 0 0 10px #060606
-    --nav-link-color: #29ccf1
+    --nav-link-color: #FFF
     --nav-shadow: 0 3px 10px rgba(0, 0, 0, 0.5)
     --shadow-sm: 0 2px 9px 2px rgba(0, 0, 0, 0.5)
     --shadow-md: 0 5px 10px 1px rgb(18, 16, 19)
@@ -58,9 +64,10 @@ body
   font-family: 'Montserrat', sans-serif
   background-color: var(--body-bg-color)
   color: var(--body-text-color)
-  transition: 250ms color, 250ms background-color
   height: 100%
   letter-spacing: 0.5px
+  line-height: 1.5
+  overflow-x: hidden
 
 ul
   list-style: none
@@ -68,34 +75,6 @@ ul
 .no-scroll
   overflow-y: hidden
 
-.dark-theme
-  .github-logo
-    g
-      fill: #FFF
-
-.input, .textarea
-  outline: none
-  width: 100%
-  color: var(--body-text-color)
-  background: var(--bg-alt2)
-  border-radius: var(--border-radius-lg)
-  border: 2px solid transparent
-  box-shadow: var(--input-shadow)
-  &:focus
-    border: 2px solid #3da5ff
-
-.textarea
-  padding: 1rem
-  resize: none
-  
-.input
-  padding: 0.2rem 1rem
-  height: 50px
-  &__container
-    position: relative
-    margin-bottom: 25px
-  &__icon
-    position: absolute
-    top: 13px
-    left: 10px
-    width: 20px
+.github-logo
+  g
+    fill: #FFF

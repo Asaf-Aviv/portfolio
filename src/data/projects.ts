@@ -1,13 +1,13 @@
-import BlogglyScreenshot from '../assets/projects screenshots/blogggly.png';
-import BlogglyDarkScreenshot from '../assets/projects screenshots/blogggly-dark.png';
-import MemorizeScreenshot from '../assets/projects screenshots/memorize.png';
-import ShopplyScreenshot from '../assets/projects screenshots/shopply.png';
-import MiniTwitchScreenshot from '../assets/projects screenshots/mini-twitch.png';
-import ChatScreenshot from '../assets/projects screenshots/chat.png';
-import MonopolyFriendsScreenshot from '../assets/projects screenshots/monopolyfriends.png';
-import CocktailsAndChillScreenshot from '../assets/projects screenshots/cocktailsandchill.png';
-import PortfolioScreenshot from '../assets/projects screenshots/portfolio.png';
-import PortfolioDarkScreenshot from '../assets/projects screenshots/portfolio-dark.png';
+import BlogglyScreenshot from '../assets/projects screenshots/blogggly.jpg';
+import BlogglyDarkScreenshot from '../assets/projects screenshots/blogggly-dark.jpg';
+import MemorizeScreenshot from '../assets/projects screenshots/memorize.jpg';
+import ShopplyScreenshot from '../assets/projects screenshots/shopply.jpg';
+import MiniTwitchScreenshot from '../assets/projects screenshots/mini-twitch.jpg';
+import ChatScreenshot from '../assets/projects screenshots/chat.jpg';
+import MonopolyFriendsScreenshot from '../assets/projects screenshots/monopolyfriends.jpg';
+import CocktailsAndChillScreenshot from '../assets/projects screenshots/cocktailsandchill.jpg';
+import PortfolioScreenshot from '../assets/projects screenshots/portfolio.jpg';
+import PortfolioDarkScreenshot from '../assets/projects screenshots/portfolio-dark.jpg';
 
 export interface ProjectCardProps {
   name: string;
@@ -23,7 +23,7 @@ export interface ProjectCardProps {
 
 const projects: ProjectCardProps[] = [
   {
-    name: 'Monopoly Friends (WIP)',
+    name: 'Monopoly Friends',
     description: 'Multiplayer Monopoly Game',
     screenshot: MonopolyFriendsScreenshot,
     frontend: ['React', 'Redux', 'Material-UI', 'WebSockets'],
