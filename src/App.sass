@@ -24,47 +24,47 @@
   --text-colored: #5a67f6
   --text-colored-dark: #704ff9
   --border-color: #dedede
-  --img-shadow: 0 2px 12px 3px #d8d8d8
-  --input-shadow:  0 2px 5px 3px #d4d4d4
   --nav-bg-color: #FFF
   --nav-drawer-shadow: 0 0 10px #585757
   --nav-link-color: #ebfbff
   --nav-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
   --shadow-sm: 0 2px 9px 2px rgba(191, 191, 191, 0.3)
   --shadow-md: 0 5px 10px 1px rgba(0, 0, 0, 0.15)
-  --shadow-lg: 0px 5px 30px rgba(111, 106, 106, 0.4)
-  --text-color-alt: #19616f
+  --shadow-lg: 0px 5px 15px 2px rgba(111, 106, 106, 0.4)
   --title-color: #FFF
+  --submit-bg: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%)
   --transparent-bg: rgba(0, 0, 0, 0.3)
   --gradient: linear-gradient(315deg, #08AEEA 0%, #902aff 100%)
   --nav-gradient: linear-gradient(315deg, #457ef2 0%, #902aff 100%)
   &.dark-theme
-    --bg-alt: #221f2385
+    --bg-alt1: #222338
     --bg-alt2: #3e3e3e
-    --body-bg-color: #3c393e
+    --bg-alt3: #213872 
+    --body-bg-color: #182c6e
     --body-text-color: #e2e2e2
     --border-color: #585858
-    --img-shadow: 0 2px 12px 3px #1f1f1f
-    --input-shadow:  0 2px 5px 3px #191515
+    --text-colored: #c5b0ff
+    --text-colored-dark: #45d4f5
     --nav-bg-color: #312c33
     --nav-drawer-shadow: 0 0 10px #060606
     --nav-link-color: #FFF
     --nav-shadow: 0 3px 10px rgba(0, 0, 0, 0.5)
-    --shadow-sm: 0 2px 9px 2px rgba(0, 0, 0, 0.5)
+    --shadow-sm: 0 2px 5px 2px rgba(25, 25, 25, 0.5)
     --shadow-md: 0 5px 10px 1px rgb(18, 16, 19)
+    --shadow-lg: 0px 5px 15px 4px rgba(0, 0, 0, 0.4)
     --text-color-alt: #cef6ff
     --title-color: #45d4f5
-
+    --gradient: linear-gradient(315deg, #086182 0%, #340a61 100%)
+    --nav-gradient: linear-gradient(315deg, #194778 0%, #320d62 100%)
+    --submit-bg: linear-gradient(to right, #211b7d 0%, #2761ab 51%, #112869 100%)
     --transparent-bg: rgba(0, 0, 0, 0.5)
 html
   scroll-behavior: smooth
-  min-height: 100vh
 
 body
   font-family: 'Montserrat', sans-serif
   background-color: var(--body-bg-color)
   color: var(--body-text-color)
-  height: 100%
   letter-spacing: 0.5px
   line-height: 1.5
   overflow-x: hidden

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 import { DarkModeContext } from '../../App';
 import { ProjectCardProps, techToSvg } from '../../data/projects';
 import { ReactComponent as GithubLogo } from '../../assets/logos/github.svg';
@@ -23,7 +23,6 @@ const renderTechStack = (stack: string[]) => (
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   name,
-  description,
   screenshot,
   darkScreenshot,
   backend,
@@ -35,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const isDarkMode = useContext(DarkModeContext);
 
   return (
-    <Slide left fraction={0.7} opposite>
+    <Fade fraction={0.7}>
       <div className="project__card">
         <div className="project__card-img-container">
           <img
@@ -68,7 +67,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 {name}
               </a>
             </h3>
-            <h5 className="project__card-description">{description}</h5>
           </div>
           <div className="project__card-stack">
             <ul className="project__card-stack-list">
@@ -78,102 +76,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </ul>
           </div>
         </div>
-        {/* <div className="tech-stack">
-        <h2 className="tech-stack__header">Tech Stack</h2>
-        <Divider />
-        <div className="tech-stack__category-container">
-          {renderTechStack('Front End', frontend)}
-          {backend && renderTechStack('Back End', backend)}
-          {db && renderTechStack('Database', db)}
-        </div>
       </div>
-      <div style={{ marginTop: 'auto' }}><Divider /></div>
-      <div className="project__card-footer">
-        <div className="fill" />
-        <a
-          className="project__card-link"
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open Project
-        </a>
-        {github
-          ? (
-            <a
-              className="my-links__link project__card-github-link"
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GithubLogo className="github-logo" />
-            </a>
-          )
-          : <div className="fill" />}
-      </div> */}
-      </div>
-    </Slide>
+    </Fade>
   );
 };
-// const ProjectCard: React.FC<ProjectCardProps> = ({
-//   name,
-//   description,
-//   screenshot,
-//   darkScreenshot,
-//   backend,
-//   frontend,
-//   db,
-//   href,
-//   github,
-// }) => {
-//   const isDarkMode = useContext(DarkModeContext);
-
-//   return (
-//     <div className="project__card">
-//       <h3 className="project__card-name">{name}</h3>
-//       <h4 className="project__card-description">{description}</h4>
-//       <div className="project__img-container">
-//         <img
-//           className="project__img"
-//           src={isDarkMode && darkScreenshot ? darkScreenshot : screenshot}
-//           alt={`${name} homepage`}
-//         />
-//       </div>
-//       <div className="tech-stack">
-//         <h2 className="tech-stack__header">Tech Stack</h2>
-//         <Divider />
-//         <div className="tech-stack__category-container">
-//           {renderTechStack('Front End', frontend)}
-//           {backend && renderTechStack('Back End', backend)}
-//           {db && renderTechStack('Database', db)}
-//         </div>
-//       </div>
-//       <div style={{ marginTop: 'auto' }}><Divider /></div>
-//       <div className="project__card-footer">
-//         <div className="fill" />
-//         <a
-//           className="project__card-link"
-//           href={href}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Open Project
-//         </a>
-//         {github
-//           ? (
-//             <a
-//               className="my-links__link project__card-github-link"
-//               href={github}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               <GithubLogo className="github-logo" />
-//             </a>
-//           )
-//           : <div className="fill" />}
-//       </div>
-//     </div>
-//   );
-// };
 
 export default ProjectCard;

@@ -1,7 +1,15 @@
+.dark-theme
+  .project__card
+    .github-logo
+      height: 24px
+      width: 24px
+      g
+        fill: #FFF
+  
 .project__card
   position: relative
   display: flex
-  background-color: #FFF
+  background-color: var(--bg-alt1)
   box-shadow: var(--shadow-sm)
   margin-bottom: var(--space-lg)
   transition: box-shadow 200ms
@@ -27,10 +35,9 @@
     flex: 1
     padding: var(--space-sm)
   &-link
+    color: var(--text-colored-dark)
     text-decoration: none
     display: block
-    &:visited
-      color: inherit
     &:hover
       text-decoration: underline
   &-name
@@ -38,6 +45,7 @@
     margin: 0 auto
     color: var(--text-colored-dark)
   &-stack
+    user-select: none
     &-list
       width: 100%
       display: flex
