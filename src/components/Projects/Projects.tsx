@@ -14,9 +14,11 @@ const renderProjectCard = (project: ProjectCardProps) => (
 const Projects: React.FC = () => (
   <section id="projects">
     <h2 className="projects__title">Projects</h2>
-    <ul className="projects__list">
-      {projects.map(renderProjectCard)}
-    </ul>
+    <Container>
+      <ul className="projects__list">
+        {projects.map(renderProjectCard)}
+      </ul>
+    </Container>
   </section>
 );
 

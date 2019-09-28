@@ -38,7 +38,7 @@ const About: React.FC = () => (
         </Bounce>
       </div>
       <div className="about__paragraphs-container">
-        <Zoom left cascade delay={300} fraction={0.3}>
+        <Zoom left cascade delay={300} fraction={0.7}>
           <div>
             {paragraphs.map(renderParagraph)}
             <p className="about__paragraph">
@@ -50,26 +50,28 @@ const About: React.FC = () => (
               through code.
             </p>
             <Fade delay={1500} duration={0}>
-              <Zoom delay={1650} cascade duration={600}>
-                <div className="my-links">
-                  <a
-                    className="my-links__link"
-                    href="https://github.com/Asaf-Aviv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+              <div className="my-links">
+                <a
+                  className="my-links__link"
+                  href="https://github.com/Asaf-Aviv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Zoom delay={1650} cascade duration={400}>
                     <GithubLogo className="github-logo" />
-                  </a>
-                  <a
-                    className="my-links__link"
-                    href="https://stackoverflow.com/users/8605960/asaf-aviv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  </Zoom>
+                </a>
+                <a
+                  className="my-links__link"
+                  href="https://stackoverflow.com/users/8605960/asaf-aviv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Zoom delay={1900} cascade duration={400}>
                     <StackOverflowLogo />
-                  </a>
-                </div>
-              </Zoom>
+                  </Zoom>
+                </a>
+              </div>
             </Fade>
           </div>
           <Fade cascade up delay={1800} duration={500}>

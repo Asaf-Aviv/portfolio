@@ -8,6 +8,15 @@ import MonopolyFriendsScreenshot from '../assets/projects screenshots/monopolyfr
 import CocktailsAndChillScreenshot from '../assets/projects screenshots/cocktailsandchill.jpg';
 import PortfolioScreenshot from '../assets/projects screenshots/portfolio.jpg';
 import PortfolioDarkScreenshot from '../assets/projects screenshots/portfolio-dark.jpg';
+import { ReactComponent as ReactLogo } from '../assets/logos/react.svg';
+import { ReactComponent as NodejsLogo } from '../assets/logos/nodejs-circle.svg';
+import { ReactComponent as GraphQLLogo } from '../assets/logos/graphql.svg';
+import { ReactComponent as JavaScriptLogo } from '../assets/logos/javascript.svg';
+import { ReactComponent as TypeScriptLogo } from '../assets/logos/typescript.svg';
+import { ReactComponent as MongoDBLogo } from '../assets/logos/mongodb.svg';
+import { ReactComponent as SASSLogo } from '../assets/logos/sass.svg';
+import { ReactComponent as ReduxLogo } from '../assets/logos/redux.svg';
+import { ReactComponent as MaterialUILogo } from '../assets/logos/material-ui.svg';
 
 export interface ProjectCardProps {
   name: string;
@@ -20,6 +29,22 @@ export interface ProjectCardProps {
   href: string;
   github?: string;
 }
+
+interface TechToSvg {
+  [key: string]: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+}
+
+export const techToSvg: TechToSvg = {
+  JavaScript: JavaScriptLogo,
+  TypeScript: TypeScriptLogo,
+  React: ReactLogo,
+  Redux: ReduxLogo,
+  'Material-UI': MaterialUILogo,
+  SASS: SASSLogo,
+  MongoDB: MongoDBLogo,
+  'Node.js': NodejsLogo,
+  GraphQL: GraphQLLogo,
+};
 
 const projects: ProjectCardProps[] = [
   {

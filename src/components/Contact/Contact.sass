@@ -1,12 +1,12 @@
 #contact
-  margin-top: 70px
+  margin-top: 30px
   padding-bottom: 100px
 
 .contact
   &__container
     display: flex
     flex-direction: column
-    background-color: var(--bg-alt2)
+    background-color: var(--body-bg-color)
     border-radius: var(--border-radius-lg)
     overflow: hidden
     box-shadow: var(--shadow-lg)
@@ -92,6 +92,7 @@
   color: #FFF
   width: 100%
   outline: none
+  border-bottom: 1px solid #dcdcdc
   &::placeholder
     font-style: italic
     color: #a7a7a7
@@ -106,25 +107,29 @@
       right: 50%
       left: 50%
       height: 2px
-      background: #00ffea
+      background-color: var(--text-colored-dark)
     &:focus-within
       &::after
         left: 0
       &::before
         right: 0
     &::before
-      transition: right 200ms
+      transition: right 150ms
     &::after
-      transition: left 200ms
+      transition: left 150ms
 
 .textarea
   background: none
+  outline: none
   width: 100%
   padding: 0.5rem
   border-radius: 6px
-  border-color: #00ffea
-  color: #FFF
+  border-color: #dcdcdc
+  color: var(--body-text-color)
   margin-bottom: 1.5rem
+  transition: border-color 130ms ease-in
   &::placeholder
     font-style: italic
     color: #a7a7a7
+  &:focus
+    border-color: var(--text-colored-dark)

@@ -1,87 +1,156 @@
-.project
-  &__img
-    width: 100%
-    box-shadow: var(--img-shadow)
-  &__card
-    border-radius: var(--border-radius-lg)
-    background: var(--bg-alt)
-    box-shadow: var(--shadow-md)
+.project__card
+  position: relative
+  display: flex
+  background-color: #FFF
+  box-shadow: var(--shadow-sm)
+  margin-bottom: var(--space-lg)
+  transition: box-shadow 200ms
+  &-github-link
+    position: absolute
+    right: 15px
+    top: 15px
+    .github-logo
+      height: 24px
+      width: 24px
+      g
+        fill: #000
+  &:hover
+    box-shadow: var(--shadow-lg)
+  &-img
+    max-width: 300px
+    display: block
+    &-container
+  &-header
+    text-align: center
+    margin-bottom: var(--space-sm)
+  &-body
+    flex: 1
+    padding: var(--space-sm)
+  &-link
+    text-decoration: none
+    display: block
+    &:visited
+      color: inherit
+    &:hover
+      text-decoration: underline
+  &-name
+    width: 80%
     margin: 0 auto
-    height: 100%
-    display: flex
-    flex-direction: column
-    overflow: hidden
-    &-name
-      color: var(--title-color)
-      padding-top: var(--space-md)
-    &-name, &-description
-      text-align: center
-      margin: 0 0 var(--space-md) 0
-    &-footer
-      padding: 1rem
+    color: var(--text-colored-dark)
+  &-stack
+    &-list
+      width: 100%
       display: flex
-      align-items: center
-      justify-content: center
-      .fill
-        flex: 1
-    &-link
-      text-align: center
-      font-weight: 600
-      flex: 4
-      height: 50px
-      line-height: 47px
-      border-radius: 4px
-      border: 1px solid var(--title-color)
-      text-decoration: none
-      color: var(--text-color-alt)
-      transition: 150ms color, 150ms background
-      &:hover
-        background: #1a7b90
-        color: #FFF
-      &:active
-        background-color: #155f6f
-    &-github-link
-      flex: 1
-      display: inline-block
-      margin-left: var(--space-md)
-      .github-logo
-        width: 50px
+      flex-wrap: wrap
+      align-items: flex-start
+      &-item
+        border: 1px solid var(--text-colored-dark)
+        padding: 3px 5px
+        border-radius: 3px
+        margin-right: var(--space-sm)
+        margin-bottom: var(--space-sm)
+        display: flex
+        align-items: center
+        transition: background-color 120ms, color 200ms ease-out
+        &:hover
+          color: #FFF
+          background-color: #111454
+        .tech
+          &-logo
+            margin-right: var(--space-sm)
+            width: 24px
+            height: 24px
+          &-name
+            font-weight: 500
 
-.tech-stack
-  flex: 1
-  padding: 20px 20px 0
-  &__header
-    color: var(--title-color)
-    text-align: center
-  &__title
-    margin-bottom: 0.5rem
-    color: var(--title-color)
-  &__category
-    margin-top: var(--space-md)
-  &__category-container
-    text-align: center
-    justify-content: flex-start
-  &__list
-    &-item
-      padding: 0.5rem 1.5rem
 
-// @media (min-width: 600px) and (max-width: 785px)
-//   .tech-stack
-//     &__category
-//       width: 33%
-//       padding: var(--space-sm)
-//       margin-bottom: 0
-//     &__category-container
+// .project
+//   &__img
+//     width: 100%
+//     max-width: 300px
+//     box-shadow: var(--img-shadow)
+//     display: block
+//   &__card
+//     border-radius: var(--border-radius-lg)
+//     background: var(--bg-alt)
+//     box-shadow: var(--shadow-md)
+//     margin: 0 auto
+//     height: 100%
+//     display: flex
+//     overflow: hidden
+//     &-body
+//       flex: 1
+//     &-name
+//       color: var(--text-colored-dark)
+//       // padding-top: var(--space-md)
+//     &-name, &-description
+//       text-align: center
+//       margin: 0 0 var(--space-md) 0
+//     &-footer
+//       padding: 1rem
 //       display: flex
-//       text-align: left
+//       align-items: center
+//       justify-content: center
+//       .fill
+//         flex: 1
+//     &-link
+//       text-align: center
+//       font-weight: 600
+//       flex: 4
+//       height: 50px
+//       line-height: 47px
+//       border-radius: 4px
+//       border: 1px solid var(--title-color)
+//       text-decoration: none
+//       color: var(--text-color-alt)
+//       transition: 150ms color, 150ms background
+//       &:hover
+//         background: #1a7b90
+//         color: #FFF
+//       &:active
+//         background-color: #155f6f
+//     &-github-link
+//       flex: 1
+//       display: inline-block
+//       margin-left: var(--space-md)
+//       .github-logo
+//         width: 50px
 
-// @media (min-width: 1250px)
-//   .tech-stack
-//     &__category
-//       width: 33%
-//       padding-top: var(--space-sm)
-//       padding-left: var(--space-sm)
-//       margin-bottom: 0
-//     &__category-container
-//       display: flex
-//       text-align: left
+// .tech-stack
+//   flex: 1
+//   padding: 20px 20px 0
+//   &__header
+//     color: var(--title-color)
+//     text-align: center
+//   &__title
+//     margin-bottom: 0.5rem
+//     color: var(--title-color)
+//   &__category
+//     margin-top: var(--space-md)
+//   &__category-container
+//     text-align: center
+//     justify-content: flex-start
+//   &__list
+//     &-item
+//       padding: 0.5rem 1.5rem
+
+// // @media (min-width: 600px) and (max-width: 785px)
+// //   .tech-stack
+// //     &__category
+// //       width: 33%
+// //       padding: var(--space-sm)
+// //       margin-bottom: 0
+// //     &__category-container
+// //       display: flex
+// //       text-align: left
+
+// // @media (min-width: 1250px)
+// //   .tech-stack
+// //     &__category
+// //       width: 33%
+// //       padding-top: var(--space-sm)
+// //       padding-left: var(--space-sm)
+// //       margin-bottom: 0
+// //     &__category-container
+// //       display: flex
+// //       text-align: left
