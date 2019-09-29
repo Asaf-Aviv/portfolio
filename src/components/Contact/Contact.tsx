@@ -1,7 +1,5 @@
 import React from 'react';
-import Section from '../Section';
-import ContentCard from '../ContentCard';
-import { ReactComponent as EmailIcon } from '../../assets/icons/email.svg';
+import Container from '../Container';
 
 import './Contact.sass';
 
@@ -33,8 +31,9 @@ Input.defaultProps = {
 };
 
 const Contact: React.FC = () => (
-  <Section id="contact">
-    <ContentCard>
+  <section id="contact">
+    <h2 className="contact__title">Contact</h2>
+    <Container>
       <div className="contact__container">
         <div className="contact__form-container">
           <form
@@ -42,30 +41,29 @@ const Contact: React.FC = () => (
             method="POST"
             className="contact__form"
           >
-            <h3 className="contact__form-title">Send me a message</h3>
+            <h5 className="contact__form-title">Send me a message</h5>
             <Input type="text" name="name" placeholder="Name" />
             <Input type="email" name="email" placeholder="Email" autocomplete="true" />
             <textarea className="textarea" name="message" placeholder="Message" required rows={6} />
             <button type="submit" className="contact__form-submit">
-              Send
-              <EmailIcon />
+                  SEND
             </button>
           </form>
         </div>
         <div className="contact__details">
-          <h3 className="contact__details-title">Contact Information</h3>
+          <h5 className="contact__details-title">Contact Information</h5>
           <div className="contact__details-item">
             <span>(972) 544 502 505</span>
           </div>
           <div className="contact__details-item">
             <a className="email__link" href="mailto:asafaviv89@gmail.com">
-              asafaviv89@gmail.com
+                  asafaviv89@gmail.com
             </a>
           </div>
         </div>
       </div>
-    </ContentCard>
-  </Section>
+    </Container>
+  </section>
 );
 
 export default Contact;

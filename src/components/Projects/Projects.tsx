@@ -1,13 +1,9 @@
 import React from 'react';
-import Section from '../Section';
 import ProjectCard from '../ProjectCard';
 import projects, { ProjectCardProps } from '../../data/projects';
+import Container from '../Container';
 
 import './Projects.sass';
-
-const ProjectsList: React.FC<React.ReactNode> = ({ children }) => (
-  <ul className="projects__list">{children}</ul>
-);
 
 const renderProjectCard = (project: ProjectCardProps) => (
   <li key={project.name} className="projects__list-item">
@@ -16,11 +12,14 @@ const renderProjectCard = (project: ProjectCardProps) => (
 );
 
 const Projects: React.FC = () => (
-  <Section id="projects" classes="projects" title="Projects">
-    <ProjectsList>
-      {projects.map(renderProjectCard)}
-    </ProjectsList>
-  </Section>
+  <section id="projects">
+    <h2 className="projects__title">Projects</h2>
+    <Container>
+      <ul className="projects__list">
+        {projects.map(renderProjectCard)}
+      </ul>
+    </Container>
+  </section>
 );
 
 export default Projects;

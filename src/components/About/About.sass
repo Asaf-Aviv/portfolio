@@ -1,37 +1,50 @@
+#about
+  padding-top: calc(var(--nav-height) + var(--space-lg))
+  background-color: #08AEEA
+  background-image: var(--gradient)
+  .waves
+    display: block
+    path
+      fill: var(--body-bg-color)
+
 .about
-  padding: 1rem
-  @media (min-width: 600px)
-    padding: 2rem
-  @media (min-width: 900px)
-    padding: 3rem 2rem
-  @media (min-width: 1200px)
-    padding: 4rem 2rem
+  margin: 0 auto
   &__title
     color: var(--title-color)
-    margin-top: 1rem
+    font-weight: 400
     &-container
-      margin-bottom: var(--space-sm)
+      margin-bottom: var(--space-lg)
       display: flex
       align-items: center
       justify-content: center
       flex-direction: column
       flex-wrap: wrap
       @media (min-width: 600px)
-        margin-bottom: var(--space-lg)
         flex-direction: row
         .me
           margin-right: var(--space-md)
-      @media (min-width: 900px)
-        justify-content: flex-start
       .me
         max-width: 120px
-  &__info
-    line-height: 1.3
+        box-shadow: 0 1px 3px 2px #072235
+        border-radius: 50%
+  &__paragraph
     margin-bottom: 25px
-    max-width: 786px
     &:last-of-type
       margin-bottom: 40px
     @media (min-width: 900px)
       font-size: 18px
-  .my-links
-    margin-bottom: 40px
+  &__paragraphs-container
+    max-width: 786px
+    color: #FFF
+    margin: 0 auto
+    padding: 0 10px
+    .link
+      color: #00ffea
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+    .my-links
+      margin-bottom: 40px
+      &__link
+        width: 36px
+        height: 36px

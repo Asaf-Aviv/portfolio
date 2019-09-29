@@ -1,6 +1,6 @@
-import React from 'react';
-import Section from '../Section';
-import ContentCard from '../ContentCard';
+import React, { SVGProps } from 'react';
+import Fade from 'react-reveal/Fade';
+import Container from '../Container';
 
 import { ReactComponent as HTML5Logo } from '../../assets/logos/html5.svg';
 import { ReactComponent as CSS3Logo } from '../../assets/logos/css3.svg';
@@ -15,32 +15,64 @@ import { ReactComponent as MongoDBLogo } from '../../assets/logos/mongodb.svg';
 
 import './Skills.sass';
 
-const logos = [
-  HTML5Logo,
-  CSS3Logo,
-  JavaScriptLogo,
-  TypeScriptLogo,
-  ReactLogo,
-  ReduxLogo,
-  SASSLogo,
-  NodeJSLogo,
-  MongoDBLogo,
-  GraphQLLogo,
+type SVG = React.FC<SVGProps<SVGSVGElement>>
+
+interface Skill {
+  Component: SVG;
+  text: string;
+  years: number;
+}
+
+const languages: Skill[] = [
+  { Component: JavaScriptLogo, text: 'JavaScript', years: 3 },
+  { Component: TypeScriptLogo, text: 'TypeScript', years: 0.5 },
 ];
 
-const Skills: React.FC = () => (
-  <Section id="skills" title="Skills">
-    <ContentCard>
-      <div className="skills__list">
-        {logos.map((Logo, i) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <div key={i} className="skill__card">
-            <Logo />
-          </div>
+const frontEnd: Skill[] = [
+  { Component: ReactLogo, text: 'React', years: 2 },
+  { Component: ReduxLogo, text: 'Redux', years: 2 },
+  { Component: HTML5Logo, text: 'HTML5', years: 3 },
+  { Component: CSS3Logo, text: 'CSS3', years: 3 },
+  { Component: SASSLogo, text: 'SASS', years: 2 },
+];
+
+const backEnd: Skill[] = [
+  { Component: NodeJSLogo, text: 'Node', years: 2 },
+  { Component: MongoDBLogo, text: 'MongoDB', years: 2 },
+  { Component: GraphQLLogo, text: 'GraphQL', years: 0.5 },
+];
+
+const renderCategory = (skills: Skill[], title: string, delay: number = 0) => (
+  <div className="skills__category">
+    <h3 className="skills__category-title">{title}</h3>
+    <ul className="skills__list">
+      <Fade fraction={0.3} cascade up delay={delay} duration={900}>
+        {skills.map(({ text, Component, years }) => (
+          <li className="skills__list-item" key={text}>
+            <div className="skills__list-item-logo">
+              <Component />
+            </div>
+            <span className="skills__list-item-text">{text}</span>
+            <span className="skills__list-item-text">{`${years} Years`}</span>
+          </li>
         ))}
+      </Fade>
+    </ul>
+  </div>
+);
+
+const Skills: React.FC = () => (
+  <section id="skills">
+    <Container>
+      <h2 className="skills__title">Skills</h2>
+      <div className="skills__category-container">
+        {renderCategory(languages, 'Languages', 200)}
+        {renderCategory(frontEnd, 'Front End', 400)}
+        {renderCategory(backEnd, 'Back End', 700)}
       </div>
-    </ContentCard>
-  </Section>
+    </Container>
+    <div className="line" />
+  </section>
 );
 
 export default Skills;
