@@ -64,7 +64,7 @@ const renderCategory = (skills: Skill[], title: string, delay: number = 0) => (
 const Skills: React.FC = () => (
   <section id="skills">
     <Container>
-      <h2 className="skills__title">Skills</h2>
+      <h2 className="section__title">Skills</h2>
       <div className="skills__category-container">
         {renderCategory(languages, 'Languages', 200)}
         {renderCategory(frontEnd, 'Front End', 400)}

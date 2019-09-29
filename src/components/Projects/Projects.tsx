@@ -13,7 +13,7 @@ const renderProjectCard = (project: ProjectCardProps) => (
 
 const Projects: React.FC = () => (
   <section id="projects">
-    <h2 className="projects__title">Projects</h2>
+    <h2 className="section__title">Projects</h2>
     <Container>
       <ul className="projects__list">
         {projects.map(renderProjectCard)}

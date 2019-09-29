@@ -68,15 +68,12 @@ const About: React.FC = () => (
                   rel="noopener noreferrer"
                 >
                   <Zoom delay={1900} cascade duration={400}>
-                    <StackOverflowLogo />
+                    <StackOverflowLogo className="stackoverflow-logo" />
                   </Zoom>
                 </a>
               </div>
             </Fade>
           </div>
-          <Fade cascade up delay={1800} duration={500}>
-            <h5 className="ps">PS: Don&apos;t try to click on the logos</h5>
-          </Fade>
         </Zoom>
       </div>
     </header>

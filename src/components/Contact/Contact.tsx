@@ -32,7 +32,7 @@ Input.defaultProps = {
 
 const Contact: React.FC = () => (
   <section id="contact">
-    <h2 className="contact__title">Contact</h2>
+    <h2 className="section__title">Contact</h2>
     <Container>
       <div className="contact__container">
         <div className="contact__form-container">
