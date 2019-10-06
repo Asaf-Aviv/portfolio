@@ -1,53 +1,61 @@
+#contact
+  margin-top: 30px
+  padding-bottom: 100px
+
 .contact
   &__container
     display: flex
     flex-direction: column
+    background-color: var(--body-bg-color)
+    border-radius: var(--border-radius-lg)
+    overflow: hidden
+    box-shadow: var(--shadow-lg)
+  &__title
+    font-weight: 400
+    font-size: 4rem
+    text-align: center
+    color: var(--text-colored-dark)
+    margin-bottom: var(--space-lg)
   &__form
     padding: 0 10px
     margin: 0 auto
-    overflow: auto
-    max-width: 400px
+    display: flex
+    max-width: 300px
+    flex-direction: column
+    align-items: center
     &-container
       flex: 2
       padding: 1rem 0
     &-title
-      color: var(--title-color)
       text-align: center
       padding: 20px 0
       font-size: 20px
       margin-bottom: 1rem
     &-submit
-      position: relative
       cursor: pointer
-      display: flex
-      margin: 30px 0
       height: 50px
-      width: 100%
-      align-items: center
-      justify-content: center
-      font-weight: 600
-      border-radius: var(--border-radius-lg)
-      border: none
-      background-color: #4f8dc1
+      display: block
       color: #FFF
-      box-shadow: var(--shadow-sm)
-      outline: none
-      transition: 150ms background
+      border: none
+      outline: 0
+      border-radius: 6px
+      width: 100%
+      font-weight: 600
+      background-color: #FFF
+      background-size: 200%
+      font-size: 18px
+      background-image: var(--submit-bg)
+      transition: background-position 0.5s
+      box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.5)
       &:hover
-        background-color: #467ca9
+        background-position: right center
       &:active
-        background-color: #2b5a82
-      #Capa_1
-        position: absolute
-        top: calc(50% - 20px)
-        right: 25%
-        width: 40px
+        transform: translateY(2px)
   &__details
     text-align: center
     flex: 1
     order: -1
-    border-radius: var(--border-radius-lg)
-    background-color: #4f8dc1c7
+    background-color: var(--bg-alt3)
     padding: 1rem 1.5rem
     color: #FFF
     &-title
@@ -57,7 +65,10 @@
       padding: 0.5rem 0
       font-size: 18px
       .email__link
-        color: #FFF
+        color: #00ffea
+        text-decoration: none
+        &:hover
+          text-decoration: underline
 
 @media (min-width: 786px)
   .contact
@@ -70,5 +81,54 @@
 @media (min-width: 900px)
   .contact
     &__form-container, &__details
-      padding-top: 80px 
-      padding-bottom: 80px 
+      padding-top: 40px 
+      padding-bottom: 40px 
+
+.input
+  background: none
+  border: none
+  padding: 0.5rem
+  color: #FFF
+  width: 100%
+  outline: none
+  border-bottom: 1px solid #dcdcdc
+  &::placeholder
+    font-style: italic
+    color: #a7a7a7
+  &__container
+    margin-bottom: 1.5rem
+    position: relative
+    width: 100%
+    &::before, &::after
+      position: absolute
+      content: ''
+      bottom: 0
+      right: 50%
+      left: 50%
+      height: 2px
+      background-color: var(--text-colored-dark)
+    &:focus-within
+      &::after
+        left: 0
+      &::before
+        right: 0
+    &::before
+      transition: right 150ms
+    &::after
+      transition: left 150ms
+
+.textarea
+  background: none
+  outline: none
+  width: 100%
+  padding: 0.5rem
+  border-radius: 6px
+  border-color: #dcdcdc
+  color: var(--body-text-color)
+  margin-bottom: 1.5rem
+  transition: border-color 130ms ease-in
+  &::placeholder
+    font-style: italic
+    color: #a7a7a7
+  &:focus
+    border-color: var(--text-colored-dark)

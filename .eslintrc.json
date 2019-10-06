@@ -4,7 +4,8 @@
     "es6": true
   },
   "extends": [
-    "airbnb"
+    "airbnb",
+    "plugin:@typescript-eslint/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -34,8 +35,8 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint", 
-    "react", 
+    "@typescript-eslint",
+    "react",
     "react-hooks"
   ],
   "rules": {
@@ -43,8 +44,12 @@
     "jsx-a11y/no-noninteractive-element-interactions": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "no-console": "off",
+    "no-unused-vars": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-filename-extension": "off" 
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
+    "@typescript-eslint/explicit-function-return-type": "off"
   }
 }

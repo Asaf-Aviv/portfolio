@@ -13,33 +13,37 @@ import useDarkMode from './hooks/useDarkMode';
 import 'normalize.css';
 import './App.sass';
 
-export const DarkModeContext = createContext<boolean>(false);
+export const DarkModeContext = createContext(false);
 
 const App: React.FC = () => {
   const [showAnimations, setShowAnimations] = useState(true);
   const [isDarkMode, toggleDarkMode] = useDarkMode();
 
   return (
-    <main className="App">
-      {showAnimations && (
-        <LogosProvider>
-          <Canvas />
-        </LogosProvider>
-      )}
-      <Navbar
-        isDarkMode={isDarkMode}
-        toggleDarkMode={toggleDarkMode}
-        showAnimations={showAnimations}
-        toggleAnimations={() => setShowAnimations(prevState => !prevState)}
-      />
-      <About />
-      <Skills />
-      <DarkModeContext.Provider value={isDarkMode}>
-        <Projects />
-      </DarkModeContext.Provider>
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      <div className="App">
+        {/* {showAnimations && (
+          <LogosProvider>
+            <Canvas />
+          </LogosProvider>
+        )} */}
+        <Navbar
+          isDarkMode={isDarkMode}
+          toggleDarkMode={toggleDarkMode}
+          showAnimations={showAnimations}
+          toggleAnimations={() => setShowAnimations(prevState => !prevState)}
+        />
+        <main>
+          <About />
+          <Skills />
+          <DarkModeContext.Provider value={isDarkMode}>
+            <Projects />
+          </DarkModeContext.Provider>
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

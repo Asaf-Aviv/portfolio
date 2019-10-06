@@ -5,6 +5,7 @@ import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 import { ReactComponent as SunIcon } from '../../assets/icons/sun.svg';
 import { ReactComponent as MoonIcon } from '../../assets/icons/moon.svg';
 import useWindowWidth from '../../hooks/useWindowWidth';
+import { ReactComponent as GithubLogo } from '../../assets/logos/github.svg';
 
 import './Navbar.sass';
 
@@ -46,7 +47,7 @@ const Navbar: React.FC<NavProps> = ({
 
   useEffect(() => {
     const body = document.querySelector('body')!;
-    // eslint-disable-next-line no-unused-expressions
+
     if (isOpen) {
       body.classList.add('no-scroll');
     }
@@ -74,13 +75,21 @@ const Navbar: React.FC<NavProps> = ({
             </ul>
           </div>
           <div className="togglers__container">
-            Animations
-            <Toggler checked={showAnimations} onChange={toggleAnimations} />
+            {/* Animations */}
+            {/* <Toggler checked={showAnimations} onChange={toggleAnimations} /> */}
             <Toggler classes="theme-toggler" checked={isDarkMode} onChange={toggleDarkMode}>
               <SunIcon className="toggler__input-icon sun" />
               <MoonIcon className="toggler__input-icon moon" />
             </Toggler>
           </div>
+          <a
+            className="my-links__link"
+            href="https://github.com/Asaf-Aviv"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubLogo className="github-logo" />
+          </a>
         </nav>
       </Container>
     </header>
