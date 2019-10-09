@@ -13,7 +13,7 @@ import './About.sass';
 const paragraphs: string[] = [
   "I'm a Full Stack Web Developer based in Haifa, Israel looking for a company to grow as a person as well as a developer.",
   "I'm highly motivated with a can do attitude, love learning and breaking stuff on a daily basis.",
-  'I love working with(but not limited too) React, Redux, TypeScript, Node and GraphQL but happy to work and learn other technologies as well.',
+  'I love working with(but not limited too) React, Redux, TypeScript, Node and GraphQL but happy to work with or learn other technologies as well.',
 ];
 
 const renderParagraph = (text: string, i: number) => (
