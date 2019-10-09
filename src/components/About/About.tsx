@@ -42,7 +42,7 @@ const About: React.FC = () => (
           <div>
             {paragraphs.map(renderParagraph)}
             <p className="about__paragraph">
-              Outside of vscode you can find me mustly on
+              Outside of vscode you can find me mostly on
               {' '}
               <a href="https://www.reactiflux.com/" target="_blank" rel="noopener noreferrer" className="link">Reactiflux</a>
               {' '}
