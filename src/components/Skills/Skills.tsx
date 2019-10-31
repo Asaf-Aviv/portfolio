@@ -20,55 +20,54 @@ type SVG = React.FC<SVGProps<SVGSVGElement>>
 interface Skill {
   Component: SVG;
   text: string;
-  years: number;
 }
 
-const languages: Skill[] = [
-  { Component: JavaScriptLogo, text: 'JavaScript', years: 3 },
-  { Component: TypeScriptLogo, text: 'TypeScript', years: 0.5 },
+const skills: Skill[] = [
+  { Component: JavaScriptLogo, text: 'JavaScript' },
+  { Component: TypeScriptLogo, text: 'TypeScript' },
+  { Component: ReactLogo, text: 'React' },
+  { Component: ReduxLogo, text: 'Redux' },
+  { Component: HTML5Logo, text: 'HTML5' },
+  { Component: CSS3Logo, text: 'CSS3' },
+  { Component: SASSLogo, text: 'SASS' },
+  { Component: NodeJSLogo, text: 'Node' },
+  { Component: MongoDBLogo, text: 'MongoDB' },
+  { Component: GraphQLLogo, text: 'GraphQL' },
 ];
 
-const frontEnd: Skill[] = [
-  { Component: ReactLogo, text: 'React', years: 2 },
-  { Component: ReduxLogo, text: 'Redux', years: 2 },
-  { Component: HTML5Logo, text: 'HTML5', years: 3 },
-  { Component: CSS3Logo, text: 'CSS3', years: 3 },
-  { Component: SASSLogo, text: 'SASS', years: 2 },
-];
-
-const backEnd: Skill[] = [
-  { Component: NodeJSLogo, text: 'Node', years: 2 },
-  { Component: MongoDBLogo, text: 'MongoDB', years: 2 },
-  { Component: GraphQLLogo, text: 'GraphQL', years: 0.5 },
-];
-
-const renderCategory = (skills: Skill[], title: string, delay: number = 0) => (
-  <div className="skills__category">
-    <h3 className="skills__category-title">{title}</h3>
-    <ul className="skills__list">
-      <Fade fraction={0.3} cascade up delay={delay} duration={900}>
-        {skills.map(({ text, Component, years }) => (
-          <li className="skills__list-item" key={text}>
-            <div className="skills__list-item-logo">
-              <Component />
-            </div>
-            <span className="skills__list-item-text">{text}</span>
-            <span className="skills__list-item-text">{`${years} Years`}</span>
-          </li>
-        ))}
-      </Fade>
-    </ul>
-  </div>
-);
+// const renderCategory = (skills: Skill[], title: string, delay = 0) => (
+//     <h3 className="skills__category-title">{title}</h3>
+//     <ul className="skills__list">
+//       <Fade fraction={0.3} cascade up delay={delay} duration={900}>
+//         {skills.map(({ text, Component }) => (
+//           <li className="skills__list-item" key={text}>
+//             <div className="skills__list-item-logo">
+//               <Component />
+//             </div>
+//             <span className="skills__list-item-text">{text}</span>
+//           </li>
+//         ))}
+//       </Fade>
+//     </ul>
+// );
 
 const Skills: React.FC = () => (
   <section id="skills">
     <Container>
       <h2 className="section__title">Skills</h2>
       <div className="skills__category-container">
-        {renderCategory(languages, 'Languages', 200)}
-        {renderCategory(frontEnd, 'Front End', 400)}
-        {renderCategory(backEnd, 'Back End', 700)}
+        <ul className="skills__list">
+          <Fade fraction={0.3} cascade up>
+            {skills.map(({ text, Component }) => (
+              <li className="skills__list-item" key={text}>
+                <div className="skills__list-item-logo">
+                  <Component />
+                </div>
+                <span className="skills__list-item-text">{text}</span>
+              </li>
+            ))}
+          </Fade>
+        </ul>
       </div>
     </Container>
     <div className="line" />

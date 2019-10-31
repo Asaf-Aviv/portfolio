@@ -1,7 +1,7 @@
 #skills
   padding-top: calc(var(--nav-height) + var(--space-lg))
   position: relative
-  z-index: -3
+  z-index: -1
   .code-svg
     position: absolute
     width: '100%'
@@ -40,6 +40,10 @@
       margin: 0 var(--space-md)
       background: var(--text-colored)
   &__list
+    display: grid
+    width: 100%
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+    justify-items: center
     &-item
       text-align: center
       display: flex
@@ -61,6 +65,3 @@
 @media (max-width: 850px)
   .skills__category
     margin-bottom: var(--space-md)
-    &-container
-      flex-direction: column
-      align-items: center
