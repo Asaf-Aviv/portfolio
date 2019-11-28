@@ -8,7 +8,6 @@ import MonopolyFriendsScreenshot from '../assets/projects screenshots/monopolyfr
 import CocktailsAndChillScreenshot from '../assets/projects screenshots/cocktailsandchill.jpg';
 import PortfolioScreenshot from '../assets/projects screenshots/portfolio.jpg';
 import PortfolioDarkScreenshot from '../assets/projects screenshots/portfolio-dark.jpg';
-import FacebookScreenshot from '../assets/projects screenshots/facebook.jpg';
 import { ReactComponent as ReactLogo } from '../assets/logos/react.svg';
 import { ReactComponent as NodejsLogo } from '../assets/logos/nodejs-circle.svg';
 import { ReactComponent as GraphQLLogo } from '../assets/logos/graphql.svg';
@@ -49,12 +48,13 @@ export const techToSvg: TechToSvg = {
 
 const projects: ProjectCardProps[] = [
   {
-    name: 'Facebook',
-    description: 'Facebook feed page',
-    screenshot: FacebookScreenshot,
-    frontend: ['React', 'styled-components'],
-    href: 'https://zealous-nobel-fca1e5.netlify.com/',
-    github: 'https://github.com/Asaf-Aviv/facebook',
+    name: 'Monopoly Friends',
+    description: 'Multiplayer Monopoly Game',
+    screenshot: MonopolyFriendsScreenshot,
+    frontend: ['React', 'Redux', 'Material-UI'],
+    backend: ['Node.js', 'GraphQL', 'WebSockets'],
+    db: ['MongoDB'],
+    href: 'https://monopolyfriends.com',
   },
   {
     name: 'Cocktails And Chill',
@@ -63,15 +63,6 @@ const projects: ProjectCardProps[] = [
     frontend: ['React', 'Redux', 'ant design'],
     href: 'https://cocktailsandchill.com',
     github: 'https://github.com/Asaf-Aviv/cocktails-n-chill/',
-  },
-  {
-    name: 'Monopoly Friends',
-    description: 'Multiplayer Monopoly Game',
-    screenshot: MonopolyFriendsScreenshot,
-    frontend: ['React', 'Redux', 'Material-UI'],
-    backend: ['Node.js', 'GraphQL', 'WebSockets'],
-    db: ['MongoDB'],
-    href: 'https://monopolyfriends.com',
   },
   {
     name: 'Blogggly',

@@ -5,7 +5,9 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Canvas from './components/Canvas';
 import Footer from './components/Footer';
+import LogosProvider from './components/Canvas/LogoLoaderProvider';
 import useDarkMode from './hooks/useDarkMode';
 
 import 'normalize.css';
