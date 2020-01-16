@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.a6ee22f4.chunk.css",
-    "main.js": "/portfolio/static/js/main.7751ba01.chunk.js",
+    "main.js": "/portfolio/static/js/main.95c3e6b2.chunk.js",
     "runtime-main.js": "/portfolio/static/js/runtime-main.14a56db7.js",
     "static/css/2.24bf1742.chunk.css": "/portfolio/static/css/2.24bf1742.chunk.css",
-    "static/js/2.97b6a2fd.chunk.js": "/portfolio/static/js/2.97b6a2fd.chunk.js",
+    "static/js/2.ae129b25.chunk.js": "/portfolio/static/js/2.ae129b25.chunk.js",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.1decfceb2454dbf6c7821f749b4c1ec4.js": "/portfolio/precache-manifest.1decfceb2454dbf6c7821f749b4c1ec4.js",
+    "precache-manifest.ad3b629f06eaab757c3e07aa24698089.js": "/portfolio/precache-manifest.ad3b629f06eaab757c3e07aa24698089.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/media/blogggly-dark.jpg": "/portfolio/static/media/blogggly-dark.5403c4e2.jpg",
     "static/media/blogggly.jpg": "/portfolio/static/media/blogggly.36e00e0f.jpg",
@@ -14,6 +14,7 @@
     "static/media/cocktailsandchill.jpg": "/portfolio/static/media/cocktailsandchill.bbaa3e6b.jpg",
     "static/media/css3.a70a7e3e.svg": "/portfolio/static/media/css3.a70a7e3e.svg",
     "static/media/drive-in.png": "/portfolio/static/media/drive-in.a79b1935.png",
+    "static/media/facebook.png": "/portfolio/static/media/facebook.f35a74f3.png",
     "static/media/github.4097a5be.svg": "/portfolio/static/media/github.4097a5be.svg",
     "static/media/graphql.5bf8a3ca.svg": "/portfolio/static/media/graphql.5bf8a3ca.svg",
     "static/media/html5.7997c424.svg": "/portfolio/static/media/html5.7997c424.svg",
