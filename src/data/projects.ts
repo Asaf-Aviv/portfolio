@@ -8,6 +8,8 @@ import MonopolyFriendsScreenshot from '../assets/projects screenshots/monopolyfr
 import CocktailsAndChillScreenshot from '../assets/projects screenshots/cocktailsandchill.jpg';
 import PortfolioScreenshot from '../assets/projects screenshots/portfolio.jpg';
 import PortfolioDarkScreenshot from '../assets/projects screenshots/portfolio-dark.jpg';
+import DriveUpScreenshot from '../assets/original screenshots/drive-in.png';
+import FacebookScreenshot from '../assets/original screenshots/facebook.png';
 import { ReactComponent as ReactLogo } from '../assets/logos/react.svg';
 import { ReactComponent as NodejsLogo } from '../assets/logos/nodejs-circle.svg';
 import { ReactComponent as GraphQLLogo } from '../assets/logos/graphql.svg';
@@ -47,6 +49,20 @@ export const techToSvg: TechToSvg = {
 };
 
 const projects: ProjectCardProps[] = [
+  {
+    name: 'Drive Up',
+    description: 'Movies and Shows information',
+    screenshot: DriveUpScreenshot,
+    frontend: ['React', 'Redux', 'styled-components'],
+    href: 'https://drive-up.netlify.com/',
+  },
+  {
+    name: 'Facebook Feed',
+    description: 'Redesign of Facebook feed page',
+    screenshot: FacebookScreenshot,
+    frontend: ['React', 'styled-components'],
+    href: 'https://facebook-feed.netlify.com/',
+  },
   {
     name: 'Monopoly Friends',
     description: 'Multiplayer Monopoly Game',

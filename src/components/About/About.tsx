@@ -11,9 +11,9 @@ import { ReactComponent as GithubLogo } from '../../assets/logos/github.svg';
 import './About.sass';
 
 const paragraphs: string[] = [
-  "I'm a Full Stack Web Developer based in Haifa, Israel looking for a company to grow as a person as well as a developer.",
-  "I'm highly motivated with a can do attitude, love learning and breaking stuff on a daily basis.",
-  'I love working with(but not limited too) React, Redux, TypeScript, Node and GraphQL but happy to work with or learn other technologies as well.',
+  "I'm a Software Engineer based in Haifa, Israel and I'm looking for a company to grow as a developer as well as a person.",
+  "I'm highly motivated with a can do attitude, I love learning new things and breaking stuff on a daily basis.",
+  'I love working with(but not limited too) React, Redux, TypeScript, Node and a bit of GraphQL but happy to work with or learn other technologies as well.',
 ];
 
 const renderParagraph = (text: string, i: number) => (
@@ -42,11 +42,11 @@ const About: React.FC = () => (
           <div>
             {paragraphs.map(renderParagraph)}
             <p className="about__paragraph">
-              Outside of vscode you can find me mostly on
+              Outside of VSCode you can find me mostly on
               {' '}
               <a href="https://www.reactiflux.com/" target="_blank" rel="noopener noreferrer" className="link">Reactiflux</a>
               {' '}
-              discord channel and on StackOverflow browsing questions and trying to help others
+              Discord channel and on StackOverflow browsing questions and trying to help others
               through code.
             </p>
             <Fade delay={1500} duration={0}>
