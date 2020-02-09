@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "575fe92d358dd682ba5d55c165dfd1c3",
+    "revision": "844586b3a3aec52d4d34eb0e0e2355d7",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "519ccd7bc2ef93f7dbd0",
+    "revision": "22fe59c600c6d401380e",
     "url": "/portfolio/static/css/2.24bf1742.chunk.css"
   },
   {
-    "revision": "cd7eca786f04789d92c5",
+    "revision": "4eb534c6cc6d063a368d",
     "url": "/portfolio/static/css/main.7e839816.chunk.css"
   },
   {
-    "revision": "519ccd7bc2ef93f7dbd0",
-    "url": "/portfolio/static/js/2.ae129b25.chunk.js"
+    "revision": "22fe59c600c6d401380e",
+    "url": "/portfolio/static/js/2.1b16180a.chunk.js"
   },
   {
-    "revision": "cd7eca786f04789d92c5",
-    "url": "/portfolio/static/js/main.c305f60b.chunk.js"
+    "revision": "4eb534c6cc6d063a368d",
+    "url": "/portfolio/static/js/main.d1e99ced.chunk.js"
   },
   {
     "revision": "9821c9659a93692e486a",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a70a7e3e545f3ddc5707d4c4da8cfa17",
     "url": "/portfolio/static/media/css3.a70a7e3e.svg"
+  },
+  {
+    "revision": "aa0bfb026a5922ca3a05df3faea40677",
+    "url": "/portfolio/static/media/discord-notebook.aa0bfb02.png"
   },
   {
     "revision": "a79b1935672701125881c961120df9fb",
